@@ -1,3 +1,5 @@
+!.env
+
 /.idea
 
 # Created by https://www.gitignore.io/api/composer,node,linux,osx,windows,laravel
@@ -126,7 +128,7 @@ bootstrap/cache/
 storage/
 .env.*.php
 .env.php
-.env
+#.env
 
 # Rocketeer PHP task runner and deployment package. https://github.com/rocketeers/rocketeer
 .rocketeer/
