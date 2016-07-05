@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+!.env
+
+>>>>>>> ec8f78fe5c5e97d481758b6294b7b8c09d281f48
 /.idea
 
 # Created by https://www.gitignore.io/api/composer,node,linux,osx,windows,laravel
@@ -124,8 +129,13 @@ app/storage/
 # Laravel 5 & Lumen specific
 bootstrap/cache/
 storage/
+<<<<<<< HEAD
 #.env.*.php
 #.env.php
+=======
+.env.*.php
+.env.php
+>>>>>>> ec8f78fe5c5e97d481758b6294b7b8c09d281f48
 #.env
 
 # Rocketeer PHP task runner and deployment package. https://github.com/rocketeers/rocketeer
