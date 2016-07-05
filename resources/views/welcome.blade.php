@@ -4,6 +4,8 @@
         <title>Laravel</title>
 
         <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
+        <link href="https://code.getmdl.io/1.1.3/material.indigo-pink.min.css" rel="stylesheet" type="text/css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
         <style>
         .modal-open .fab-modal-shadow-surogate, .fab-modal-container.active, .fab-modal-inner, .fab-modal-modal-content {
@@ -17,6 +19,8 @@
 
           body {
           background-color: #D0D0D0;
+          width: 90vw;
+          margin: 0 auto;
           }
 
           .fab-modal-backdrop {
@@ -236,6 +240,7 @@
           position: relative;
           margin: 0;
           padding: 0;
+          background: #fff;
           }
 
           .main {
