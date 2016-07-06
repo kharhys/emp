@@ -132,7 +132,7 @@
           <div id="<?= 'modal'.$customer['id']; ?>" class="modal modal__bg" role="dialog" aria-hidden="true">
             <div class="modal__dialog">
               <div class="modal__content">
-                <p style="color: #191919">
+                <p style="color: #191919; margin-top: 2rem;">
 
                   <div class="fab-modal-modal-content">
                     <div class="bar" style="padding: 1rem;">
@@ -140,7 +140,7 @@
                     </div>
                     <div class="content" style="overflow-y: auto;">
                       <div class="form-container" >
-                        <form class="form" onsubmit="createCustomer(event);" id="create-form">
+                        <form class="form" onsubmit="updateCustomer(event);" id="create-form">
 
                           <fieldset class="form-fieldset ui-input __first">
                             <input type="text" id="name" name="name" tabindex="0" value="<?=$customer['name']?>" />
@@ -202,11 +202,14 @@
                 <i class="material-icons" style="
                     position: absolute;
                     top: 0;
-                    padding: 0.5em;
+                    padding: 0.2em;
                     left: 0;
-                    color: hotpink;
+                    color: #ffffff;
                     font-size: 2rem;
                         cursor: pointer;
+                        background: #f91f69;
+                    border-radius: 50%;
+                    margin: 0.3em;
                 ">delete_forever</i>
 
               </div>
