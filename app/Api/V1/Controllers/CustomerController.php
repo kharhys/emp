@@ -20,6 +20,12 @@ class CustomerController extends Controller
         return Customer::all()->toArray();
     }
 
+    public function welcome()
+    {
+        //return Customer::all()->toArray();
+        return view('welcome');
+    }
+
     public function store(Request $request)
     {
         //$currentUser = JWTAuth::parseToken()->authenticate();
