@@ -30,7 +30,7 @@
             </div>
             <div class="content">
               <div class="form-container" >
-                <form class="form" action="#" onsubmit="createCustomer();">
+                <form class="form" onsubmit="createCustomer();">
 
                   <fieldset class="form-fieldset ui-input __first">
                     <input type="text" id="name" tabindex="0" />
