@@ -71,8 +71,8 @@
         <div id="modal" class="modal modal__bg" role="dialog" aria-hidden="true">
           <div class="modal__dialog">
             <div class="modal__content">
-              <h1>Modal</h1>
-              <p>Church-key American Apparel trust fund, cardigan mlkshk small batch Godard mustache pickled bespoke meh seitan. Wes Anderson farm-to-table vegan, kitsch Carles 8-bit gastropub paleo YOLO jean shorts health goth lo-fi. Normcore chambray locavore Banksy, YOLO meditation master cleanse readymade Bushwick.</p>
+              <h1>New Customer</h1>
+              <p>some form here</p>
 
               <!-- modal close button -->
               <a href="" class="modal__close demo-close">

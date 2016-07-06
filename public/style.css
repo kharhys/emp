@@ -525,10 +525,8 @@ img {
 
 
 .modal-open .fab-modal-shadow-surogate, .fab-modal-container.active, .fab-modal-inner, .fab-modal-modal-content {
-  width: 400px;
-  height: 500px;
-  min-width: 300px;
-  min-height: 300px;
+  width: 50vw;
+  height: 60vh;
   max-width: 100vw;
   max-height: 100vh;
 }
@@ -614,6 +612,7 @@ modal-open .fab-modal-backdrop {
   transition: opacity 0.33333s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .fab-modal-container.active {
+  z-index: 999;
   border-radius: 0;
   top: -10%;
   right: 50%;
