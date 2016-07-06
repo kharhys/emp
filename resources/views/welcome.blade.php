@@ -43,28 +43,23 @@
     <div class="main">
 
       <div class="demo-btns">
-        <header>
-          <h1>Material Design Modals toolbar</h1>
-        </header>
-
-
         <div class="info">
           <div class="buttons">
             <ul class="list hidden">
               <li class="item">
-                <span> Modal 1 </span>
+                <span> Customer 1 </span>
                 <span data-modal="#modal" class="modal__trigger"> </span>
               </li>
               <li class="item">
-                <span> Modal 2 </span>
+                <span> Customer 2 </span>
                 <span data-modal="#modal2" class="modal__trigger"> </span>
               </li>
               <li class="item">
-                <span> Modal 3 </span>
+                <span> Customer 3 </span>
                 <span data-modal="#modal3" class="modal__trigger"> </span>
               </li>
               <li class="item">
-                <span> Modal 3 </span>
+                <span> Customer 3 </span>
                 <span data-modal="#modal4" class="modal__trigger"> </span>
               </li>
             </ul>
@@ -400,7 +395,7 @@
       $('.toggle').addClass('off');
     }
   });
-  
+
   // for dramatic effect :P
   setTimeout(animateEnter, 1000);
   </script>
