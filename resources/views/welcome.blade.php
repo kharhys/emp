@@ -93,19 +93,27 @@
             <ul class="list hidden">
               <li class="item">
                 <span> Customer 1 </span>
-                <span data-modal="#modal" class="modal__trigger"> </span>
+                <span data-modal="#modal" class="modal__trigger">
+                  <i class="material-icons">create</i>
+                </span>
               </li>
               <li class="item">
                 <span> Customer 2 </span>
-                <span data-modal="#modal2" class="modal__trigger"> </span>
+                <span data-modal="#modal2" class="modal__trigger">
+                  <i class="material-icons">create</i>
+                </span>
               </li>
               <li class="item">
                 <span> Customer 3 </span>
-                <span data-modal="#modal3" class="modal__trigger"> </span>
+                <span data-modal="#modal3" class="modal__trigger">
+                  <i class="material-icons">create</i>
+                </span>
               </li>
               <li class="item">
                 <span> Customer 3 </span>
-                <span data-modal="#modal4" class="modal__trigger"> </span>
+                <span data-modal="#modal4" class="modal__trigger">
+                  <i class="material-icons">create</i> 
+                </span>
               </li>
             </ul>
           </div>
