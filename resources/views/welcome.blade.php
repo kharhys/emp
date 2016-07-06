@@ -462,7 +462,8 @@
 
   function createCustomer(event) {
     event.preventDefault()
-    console.log(event.target)
+    var formdata = new FormData(event.target)
+    console.log(formdata)
     return false
   }
   </script>
