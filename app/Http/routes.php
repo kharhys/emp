@@ -11,10 +11,6 @@
 |
 */
 
-/*
 Route::get('/', function () {
     return view('welcome');
 });
-*/
-
-Route::get('/', 'App\Api\V1\Controllers\CustomerController@welcome');

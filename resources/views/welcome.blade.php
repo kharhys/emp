@@ -1,3 +1,7 @@
+<?php
+use App\Customer;
+ ?>
+
 <!DOCTYPE html>
 <html>
 <head>
