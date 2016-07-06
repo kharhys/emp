@@ -92,7 +92,24 @@
           <div class="buttons">
             <ul class="list hidden">
               <li class="item">
-                <span> Customer 1 </span>
+                <span>
+                  <div class="ios-dl">
+                    <div class="definition-group">
+                      <dl class="dl-horizontal">
+                        <dt>City</dt>
+                        <dd>San Francisco</dd>
+                      </dl>
+                      <dl class="dl-horizontal">
+                        <dt>State</dt>
+                        <dd>Insanity</dd>
+                      </dl>
+                      <dl class="dl-horizontal">
+                        <dt>Coordinates</dt>
+                        <dd>37.7865, -122.4557</dd>
+                      </dl>
+                    </div>
+                  </div>
+                </span>
                 <span data-modal="#modal" class="modal__trigger">
                   <i class="material-icons">create</i>
                 </span>
@@ -464,10 +481,10 @@
     event.preventDefault()
     var formdata = new FormData(event.target)
     for(var pair of formdata.entries()) {
-       console.log(pair[0]+ ', '+ pair[1]);
+      console.log(pair[0]+ ', '+ pair[1]);
     }
     $.post("api/customer/store", $("#create-form").serialize(), function(data) {
-        console.log(data);
+      console.log(data);
     });
     return false
   }

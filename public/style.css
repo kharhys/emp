@@ -967,3 +967,26 @@ header h1 {
     transform: translate3d(0, 0, 0);
   }
 }
+
+
+
+.ios-dl .definition-group {
+  padding: 0;
+  display: flex;
+  background: #fff;
+}
+.ios-dl dl {
+  flex: 1;
+  padding: 1em;
+  margin: 0px;
+  background: transparent;
+  border-right: 1px solid #d9dbdf;
+}
+.ios-dl dt {
+  color: #8b91a5;
+  font-weight: bold;
+}
+.ios-dl dd {
+  color: #555;
+  margin-left: 1rem;
+}
