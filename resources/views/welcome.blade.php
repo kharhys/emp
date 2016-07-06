@@ -117,7 +117,7 @@
                       </div>
                     </div>
                   </span>
-                  <span data-modal=<?= "modal".$customer['id']; ?> class="modal__trigger">
+                  <span data-modal="<?= '#modal'.$customer['id']; ?>" class="modal__trigger">
                     <i class="material-icons">more_vert</i>
                   </span>
                 </li>
