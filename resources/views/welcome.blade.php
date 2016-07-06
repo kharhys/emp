@@ -108,11 +108,11 @@
                         </dl>
                         <dl class="dl-horizontal">
                           <dt>Gender</dt>
-                          <dd>Male</dd>
+                          <dd><?=$customer['gender']?></dd>
                         </dl>
                         <dl class="dl-horizontal">
                           <dt>Occupation</dt>
-                          <dd>Web Developer</dd>
+                          <dd><?=$customer['occupation']?></dd>
                         </dl>
                       </div>
                     </div>
@@ -134,7 +134,7 @@
               <div class="modal__content">
                 <h1>Update / Delete Customer</h1>
                 <p style="color: #191919">
-                  something
+                  form here. button there.
                 </p>
 
                 <!-- modal close button -->
