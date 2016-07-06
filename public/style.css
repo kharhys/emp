@@ -28,12 +28,7 @@ li {
 * {
   box-sizing: border-box;
 }
-body {
-  line-height: 1.5;
-  font-family: 'Roboto';
-  -webkit-font-smoothing: antialiased;
-  overflow-x: hidden;
-}
+
 h1,
 h2,
 h3,
@@ -157,13 +152,7 @@ a {
   transition: opacity 0.1s ease-out, transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
   transition: opacity 0.1s ease-out, transform 0.5s cubic-bezier(0.23, 1, 0.32, 1), -webkit-transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
 }
-/**
-* Demo specific CSS
-*/
-body {
-  height: 100vh;
-  background: #ffffff;
-}
+
 img {
   max-width: 100%;
 }
@@ -546,7 +535,7 @@ img {
 
 body {
   background-color: #D0D0D0;
-  width: 90vw;
+  width: 80vw;
   margin: 0 auto;
 }
 
