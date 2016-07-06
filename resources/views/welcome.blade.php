@@ -96,40 +96,40 @@
                   <div class="ios-dl">
                     <div class="definition-group">
                       <dl class="dl-horizontal">
-                        <dt>City</dt>
+                        <dt>Name</dt>
                         <dd>San Francisco</dd>
                       </dl>
                       <dl class="dl-horizontal">
-                        <dt>State</dt>
-                        <dd>Insanity</dd>
+                        <dt>Gender</dt>
+                        <dd>Male</dd>
                       </dl>
                       <dl class="dl-horizontal">
-                        <dt>Coordinates</dt>
-                        <dd>37.7865, -122.4557</dd>
+                        <dt>Occupation</dt>
+                        <dd>Web Developer</dd>
                       </dl>
                     </div>
                   </div>
                 </span>
                 <span data-modal="#modal" class="modal__trigger">
-                  <i class="material-icons">create</i>
+                  <i class="material-icons">more_vert</i>
                 </span>
               </li>
               <li class="item">
                 <span> Customer 2 </span>
                 <span data-modal="#modal2" class="modal__trigger">
-                  <i class="material-icons">create</i>
+                  <i class="material-icons">more_vert</i>
                 </span>
               </li>
               <li class="item">
                 <span> Customer 3 </span>
                 <span data-modal="#modal3" class="modal__trigger">
-                  <i class="material-icons">create</i>
+                  <i class="material-icons">more_vert</i>
                 </span>
               </li>
               <li class="item">
                 <span> Customer 3 </span>
                 <span data-modal="#modal4" class="modal__trigger">
-                  <i class="material-icons">create</i>
+                  <i class="material-icons">more_vert</i>
                 </span>
               </li>
             </ul>
