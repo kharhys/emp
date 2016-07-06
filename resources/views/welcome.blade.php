@@ -1,5 +1,7 @@
 <?php
-use App\Customer;
+  use App\Customer;
+  $collection = Customer::all()->toArray();
+  dd($collection);
  ?>
 
 <!DOCTYPE html>
