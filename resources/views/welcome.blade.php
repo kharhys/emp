@@ -132,8 +132,8 @@
           <div id="<?= 'modal'.$customer['id']; ?>" class="modal modal__bg" role="dialog" aria-hidden="true">
             <div class="modal__dialog">
               <div class="modal__content">
-                <h1>New Customer</h1>
-                <p>
+                <h1>Update / Delete Customer</h1>
+                <p style="color: #191919">
                   something
                 </p>
 
@@ -429,7 +429,8 @@
       console.log(pair[0]+ ', '+ pair[1]);
     }
     $.post("api/customer/store", $("#create-form").serialize(), function(data) {
-      console.log(data);
+      console.log(data)
+      window.location.reload()
     });
     return false
   }
