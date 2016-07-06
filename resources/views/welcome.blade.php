@@ -30,7 +30,7 @@
             </div>
             <div class="content">
               <div class="form-container" >
-                <form class="form" onsubmit="createCustomer(event);">
+                <form class="form" onsubmit="createCustomer(event);" id="create-form">
 
                   <fieldset class="form-fieldset ui-input __first">
                     <input type="text" id="name" name="name" tabindex="0" />
@@ -63,7 +63,7 @@
                   <fieldset class="form-fieldset ui-input __fourth">
                     <input type="text" id="phone"  name="phone" />
                     <label for="phone">
-                      <span data-text="Address">Address</span>
+                      <span data-text="Phone">Phone</span>
                     </label>
                   </fieldset>
 
@@ -466,6 +466,9 @@
     for(var pair of formdata.entries()) {
        console.log(pair[0]+ ', '+ pair[1]);
     }
+    $.post("api/customer/store", $("#create-form").serialize(), function(data) {
+        alert(data);
+    });
     return false
   }
   </script>
