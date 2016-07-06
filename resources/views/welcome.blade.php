@@ -1,6 +1,6 @@
 <?php
   use App\Customer;
-  $customers = Customer::take(1)->get()->toArray();
+  $customers = Customer::all()->toArray();
   //dd($customers);
  ?>
 
@@ -122,24 +122,6 @@
                   </span>
                 </li>
               <?php endforeach; ?>
-              <li class="item">
-                <span> Customer 2 </span>
-                <span data-modal="#modal2" class="modal__trigger">
-                  <i class="material-icons">more_vert</i>
-                </span>
-              </li>
-              <li class="item">
-                <span> Customer 3 </span>
-                <span data-modal="#modal3" class="modal__trigger">
-                  <i class="material-icons">more_vert</i>
-                </span>
-              </li>
-              <li class="item">
-                <span> Customer 3 </span>
-                <span data-modal="#modal4" class="modal__trigger">
-                  <i class="material-icons">more_vert</i>
-                </span>
-              </li>
             </ul>
           </div>
         </div>
@@ -147,7 +129,7 @@
 
         <?php foreach ($customers as $customer): ?>
           <!-- Modal -->
-          <div id=<?= "modal".$customer['id']; ?> class="modal modal__bg" role="dialog" aria-hidden="true">
+          <div id="<?= 'modal'.$customer['id']; ?>" class="modal modal__bg" role="dialog" aria-hidden="true">
             <div class="modal__dialog">
               <div class="modal__content">
                 <h1>New Customer</h1>
@@ -164,53 +146,6 @@
             </div>
           </div>
         <?php endforeach; ?>
-
-        <div id="modal2" class="modal modal--align-top modal__bg" role="dialog" aria-hidden="true">
-          <div class="modal__dialog">
-            <div class="modal__content">
-              <h1>Big Modal</h1>
-              <h3>This modal is pretty tall.</h3>
-              <p>Selfies normcore four dollar toast four loko listicle artisan. Hoodie Marfa authentic, wayfarers church-key tofu Banksy pop-up Kickstarter Brooklyn heirloom swag synth. Echo Park cray synth mixtape. Tofu gastropub squid readymade, trust fund Wes Anderson DIY PBR 8-bit try-hard +1 Shoreditch lo-fi tote bag.</p>
-              <p><img src="http://unsplash.it/600/300" alt="" /></p>
-              <p>Mumblecore cred selfies fingerstache. Tousled skateboard plaid lo-fi shabby chic salvia, swag Odd Future Etsy art party Austin cronut. Crucifix whatever Pinterest food truck, pickled viral cray 90's DIY chambray keffiyeh biodiesel Vice blog. Cred meh yr tofu.</p>
-              <p>Mumblecore cred selfies fingerstache. Tousled skateboard plaid lo-fi shabby chic salvia, swag Odd Future Etsy art party Austin cronut. Crucifix whatever Pinterest food truck, pickled viral cray 90's DIY chambray keffiyeh biodiesel Vice blog. Cred meh yr tofu.</p>
-              <!-- modal close button -->
-              <a href="" class="modal__close demo-close">
-                <svg class="" viewBox="0 0 24 24"><path d="M19 6.41l-1.41-1.41-5.59 5.59-5.59-5.59-1.41 1.41 5.59 5.59-5.59 5.59 1.41 1.41 5.59-5.59 5.59 5.59 1.41-1.41-5.59-5.59z"/><path d="M0 0h24v24h-24z" fill="none"/></svg>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div id="modal3" class="modal modal__bg" role="dialog" aria-hidden="true">
-          <div class="modal__dialog">
-            <div class="modal__content">
-              <h1>Modal 3</h1>
-              <p>Church-key American Apparel trust fund, cardigan mlkshk small batch Godard mustache pickled bespoke meh seitan. Wes Anderson farm-to-table vegan, kitsch Carles 8-bit gastropub paleo YOLO jean shorts health goth lo-fi.</p>
-
-              <!-- modal close button -->
-              <a href="" class="modal__close demo-close">
-                <svg class="" viewBox="0 0 24 24"><path d="M19 6.41l-1.41-1.41-5.59 5.59-5.59-5.59-1.41 1.41 5.59 5.59-5.59 5.59 1.41 1.41 5.59-5.59 5.59 5.59 1.41-1.41-5.59-5.59z"/><path d="M0 0h24v24h-24z" fill="none"/></svg>
-              </a>
-            </div>
-          </div>
-        </div>
-
-
-        <div id="modal4" class="modal modal__bg" role="dialog" aria-hidden="true">
-          <div class="modal__dialog">
-            <div class="modal__content">
-              <h1>Modal 4</h1>
-              <p>Church-key American Apparel trust fund, cardigan mlkshk small batch Godard mustache pickled bespoke meh seitan. Wes Anderson farm-to-table vegan, kitsch Carles 8-bit gastropub paleo YOLO jean shorts health goth lo-fi.</p>
-
-              <!-- modal close button -->
-              <a href="" class="modal__close demo-close">
-                <svg class="" viewBox="0 0 24 24"><path d="M19 6.41l-1.41-1.41-5.59 5.59-5.59-5.59-1.41 1.41 5.59 5.59-5.59 5.59 1.41 1.41 5.59-5.59 5.59 5.59 1.41-1.41-5.59-5.59z"/><path d="M0 0h24v24h-24z" fill="none"/></svg>
-              </a>
-            </div>
-          </div>
-        </div>
-
 
       </div>
     </div>
