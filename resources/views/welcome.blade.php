@@ -30,7 +30,7 @@
             </div>
             <div class="content">
               <div class="form-container" >
-                <form class="form" action="#">
+                <form class="form" action="#" onsubmit="createCustomer();">
 
                   <fieldset class="form-fieldset ui-input __first">
                     <input type="text" id="name" tabindex="0" />
@@ -112,7 +112,7 @@
               <li class="item">
                 <span> Customer 3 </span>
                 <span data-modal="#modal4" class="modal__trigger">
-                  <i class="material-icons">create</i> 
+                  <i class="material-icons">create</i>
                 </span>
               </li>
             </ul>
@@ -459,5 +459,10 @@
   $input.blur(function (e) {
     $(this).toggleClass('filled', !!$(this).val());
   });
+
+  function createCustomer(event) {
+    event.preventDefault()
+    console.log(event)
+  }
   </script>
   </html>
