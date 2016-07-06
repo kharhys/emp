@@ -461,8 +461,8 @@
   });
 
   function createCustomer(event) {
-    event.preventDefault()
     console.log(event)
+    return false;
   }
   </script>
   </html>
