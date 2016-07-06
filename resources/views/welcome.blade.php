@@ -26,14 +26,45 @@
           <div class="fab-modal-modal-content">
             <div class="bar">
               <button class="active"><i class="material-icons fab active">cancel</i></button>
-              <h2 class="mdl-card__title-text">Modal</h2>
+              <h2 class="mdl-card__title-text">Create new customer</h2>
             </div>
             <div class="content">
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semperporta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. </p>
+              <div class="form-container" >
+                <form class="form" action="#">
 
-              <p>Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce acturpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. Quisque volutpat condimentum velit. </p>
+                  <fieldset class="form-fieldset ui-input __first">
+                    <input type="text" id="username" tabindex="0" />
+                    <label for="username">
+                      <span data-text="Username">Username</span>
+                    </label>
+                  </fieldset>
 
-              <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam nec ante. Sed lacinia, urna non tincidunt mattis, tortor neque adipiscing diam, a cursus ipsum ante quis turpis. Nulla facilisi. Ut fringilla. Suspendisse potenti. Nunc feugiat mi a tellus consequat imperdiet. Vestibulum sapien. Proin quam. Etiam ultrices. Suspendisse in justo eu magna luctus suscipit. Sed lectus. </p>
+                  <fieldset class="form-fieldset ui-input __second">
+                    <input type="email" id="email" tabindex="0" />
+                    <label for="email">
+                      <span data-text="E-mail Address">E-mail Address</span>
+                    </label>
+                  </fieldset>
+
+                  <fieldset class="form-fieldset ui-input __third">
+                    <input type="password" id="new-password" />
+                    <label for="new-password">
+                      <span data-text="New Password">New Password</span>
+                    </label>
+                  </fieldset>
+
+                  <fieldset class="form-fieldset ui-input __fourth">
+                    <input type="password" id="repeat-new-password" />
+                    <label for="repeat-new-password">
+                      <span data-text="Repeat New Password">Repeat New Password</span>
+                    </label>
+                  </fieldset>
+
+                  <div class="form-footer">
+                    <input type="submit" class="btn" value="Submit" />
+                  </div>
+                </form>
+              </div>
             </div>
           </div>
         </div>
@@ -73,43 +104,7 @@
             <div class="modal__content">
               <h1>New Customer</h1>
               <p>
-                <div class="form-container" >
-                  <h2>Create new customer</h2>
-                  <form class="form" action="#">
-
-                    <fieldset class="form-fieldset ui-input __first">
-                      <input type="text" id="username" tabindex="0" />
-                      <label for="username">
-                        <span data-text="Username">Username</span>
-                      </label>
-                    </fieldset>
-
-                    <fieldset class="form-fieldset ui-input __second">
-                      <input type="email" id="email" tabindex="0" />
-                      <label for="email">
-                        <span data-text="E-mail Address">E-mail Address</span>
-                      </label>
-                    </fieldset>
-
-                    <fieldset class="form-fieldset ui-input __third">
-                      <input type="password" id="new-password" />
-                      <label for="new-password">
-                        <span data-text="New Password">New Password</span>
-                      </label>
-                    </fieldset>
-
-                    <fieldset class="form-fieldset ui-input __fourth">
-                      <input type="password" id="repeat-new-password" />
-                      <label for="repeat-new-password">
-                        <span data-text="Repeat New Password">Repeat New Password</span>
-                      </label>
-                    </fieldset>
-
-                    <div class="form-footer">
-                      <input type="submit" class="btn" value="Submit" />
-                    </div>
-                  </form>
-                </div>
+                something
               </p>
 
               <!-- modal close button -->
@@ -423,7 +418,7 @@
       animating = false;
     }));
   }
-  
+
   $('.toggle').click(function () {
     if ($('.list').hasClass('hidden')) {
       animateEnter();
