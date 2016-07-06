@@ -1,7 +1,7 @@
 <?php
   use App\Customer;
-  $collection = Customer::all()->toArray();
-  dd($collection);
+  $customers = Customer::all()->toArray();
+  //dd($customers);
  ?>
 
 <!DOCTYPE html>
@@ -97,29 +97,31 @@
         <div class="info">
           <div class="buttons">
             <ul class="list hidden">
-              <li class="item">
-                <span>
-                  <div class="ios-dl">
-                    <div class="definition-group">
-                      <dl class="dl-horizontal">
-                        <dt>Name</dt>
-                        <dd>San Francisco</dd>
-                      </dl>
-                      <dl class="dl-horizontal">
-                        <dt>Gender</dt>
-                        <dd>Male</dd>
-                      </dl>
-                      <dl class="dl-horizontal">
-                        <dt>Occupation</dt>
-                        <dd>Web Developer</dd>
-                      </dl>
+              <?php foreach ($customers as $customer): ?>
+                <li class="item">
+                  <span>
+                    <div class="ios-dl">
+                      <div class="definition-group">
+                        <dl class="dl-horizontal">
+                          <dt>Name</dt>
+                          <dd><?=$customer['name']?></dd>
+                        </dl>
+                        <dl class="dl-horizontal">
+                          <dt>Gender</dt>
+                          <dd>Male</dd>
+                        </dl>
+                        <dl class="dl-horizontal">
+                          <dt>Occupation</dt>
+                          <dd>Web Developer</dd>
+                        </dl>
+                      </div>
                     </div>
-                  </div>
-                </span>
-                <span data-modal="#modal" class="modal__trigger">
-                  <i class="material-icons">more_vert</i>
-                </span>
-              </li>
+                  </span>
+                  <span data-modal="#modal" class="modal__trigger">
+                    <i class="material-icons">more_vert</i>
+                  </span>
+                </li>
+              <?php endforeach; ?>
               <li class="item">
                 <span> Customer 2 </span>
                 <span data-modal="#modal2" class="modal__trigger">
