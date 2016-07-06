@@ -1,7 +1,7 @@
 <?php
   use App\Customer;
   $customers = Customer::take(1)->get()->toArray();
-  dd($customers);
+  //dd($customers);
  ?>
 
 <!DOCTYPE html>
