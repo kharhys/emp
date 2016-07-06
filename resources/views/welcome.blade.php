@@ -132,13 +132,11 @@
           <div id="<?= 'modal'.$customer['id']; ?>" class="modal modal__bg" role="dialog" aria-hidden="true">
             <div class="modal__dialog">
               <div class="modal__content">
-                <h1>Update / Delete Customer</h1>
                 <p style="color: #191919">
 
                   <div class="fab-modal-modal-content">
                     <div class="bar">
-                      <button class="active"><i class="material-icons fab active">cancel</i></button>
-                      <h2 class="mdl-card__title-text">Create new customer</h2>
+                      <h2 class="mdl-card__title-text">Update Customer</h2>
                     </div>
                     <div class="content">
                       <div class="form-container" >
