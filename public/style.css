@@ -875,7 +875,7 @@ header h1 {
 }
 
 .form-container .ui-input input.filled {
-  color: #ffffff;
+  color: #6EB1FF;
 }
 .form-container .ui-input input.filled + label::after {
   background-color: #ffffff;
