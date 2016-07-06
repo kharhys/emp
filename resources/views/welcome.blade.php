@@ -22,7 +22,7 @@
       <div class="fab-modal-shadow-surogate"></div>
       <div class="fab-modal-container inactive" id="dialog">
         <div class="fab-modal-inner">
-          <button class="inactive"><i class="material-icons fab inactive">launch</i></button>
+          <button class="inactive"><i class="material-icons fab inactive">add</i></button>
           <div class="fab-modal-modal-content">
             <div class="bar">
               <button class="active"><i class="material-icons fab active">cancel</i></button>
@@ -33,30 +33,44 @@
                 <form class="form" action="#">
 
                   <fieldset class="form-fieldset ui-input __first">
-                    <input type="text" id="username" tabindex="0" />
-                    <label for="username">
-                      <span data-text="Username">Username</span>
+                    <input type="text" id="name" tabindex="0" />
+                    <label for="name">
+                      <span data-text="Name">Name</span>
                     </label>
                   </fieldset>
 
                   <fieldset class="form-fieldset ui-input __second">
-                    <input type="email" id="email" tabindex="0" />
-                    <label for="email">
-                      <span data-text="E-mail Address">E-mail Address</span>
+                    <input type="text" id="gender" tabindex="0" />
+                    <label for="gender">
+                      <span data-text="Gender">Gender</span>
                     </label>
                   </fieldset>
 
                   <fieldset class="form-fieldset ui-input __third">
-                    <input type="password" id="new-password" />
-                    <label for="new-password">
-                      <span data-text="New Password">New Password</span>
+                    <input type="text" id="occupation" />
+                    <label for="occupation">
+                      <span data-text="Occupation">Occupation</span>
                     </label>
                   </fieldset>
 
                   <fieldset class="form-fieldset ui-input __fourth">
-                    <input type="password" id="repeat-new-password" />
-                    <label for="repeat-new-password">
-                      <span data-text="Repeat New Password">Repeat New Password</span>
+                    <input type="text" id="address" />
+                    <label for="address">
+                      <span data-text="Address">Address</span>
+                    </label>
+                  </fieldset>
+
+                  <fieldset class="form-fieldset ui-input __fourth">
+                    <input type="text" id="phone" />
+                    <label for="phone">
+                      <span data-text="Address">Address</span>
+                    </label>
+                  </fieldset>
+
+                  <fieldset class="form-fieldset ui-input __fourth">
+                    <input type="text" id="dob" />
+                    <label for="dob">
+                      <span data-text="Date of Birth">Date of Birth</span>
                     </label>
                   </fieldset>
 
