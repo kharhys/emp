@@ -1,6 +1,6 @@
 <?php
   use App\Customer;
-  $customers = Customer::all()->limit(1)->toArray();
+  $customers = Customer::take(1)->toArray();
   dd($customers);
  ?>
 
