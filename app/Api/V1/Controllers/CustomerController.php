@@ -22,7 +22,7 @@ class CustomerController extends Controller
 
     public function store(Request $request)
     {
-        $currentUser = JWTAuth::parseToken()->authenticate();
+        //$currentUser = JWTAuth::parseToken()->authenticate();
 
         $customer = new Customer;
 
