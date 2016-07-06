@@ -30,7 +30,7 @@
             </div>
             <div class="content">
               <div class="form-container" >
-                <form class="form" onsubmit="createCustomer();">
+                <form class="form" onsubmit="createCustomer(event);">
 
                   <fieldset class="form-fieldset ui-input __first">
                     <input type="text" id="name" tabindex="0" />
@@ -461,8 +461,9 @@
   });
 
   function createCustomer(event) {
-    console.log(event)
-    return false;
+    event.preventDefault()
+    console.log(event.target)
+    return false
   }
   </script>
   </html>
