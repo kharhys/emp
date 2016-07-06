@@ -463,7 +463,9 @@
   function createCustomer(event) {
     event.preventDefault()
     var formdata = new FormData(event.target)
-    console.log(formdata)
+    for(var pair of formData.entries()) {
+       console.log(pair[0]+ ', '+ pair[1]); 
+    }
     return false
   }
   </script>
