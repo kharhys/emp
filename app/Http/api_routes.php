@@ -19,9 +19,10 @@ $api->version('v1', function ($api) {
 		return \App\User::all();
 	});
 
+	$api->post('customer/store', 'App\Api\V1\Controllers\CustomerController@store');
+	$api->get('customer', 'App\Api\V1\Controllers\CustomerController@index');
+
 	$api->group(['middleware' => 'api.auth'], function ($api) {
-		$api->post('customer/store', 'App\Api\V1\Controllers\CustomerController@store');
-		$api->get('customer', 'App\Api\V1\Controllers\CustomerController@index');
 	});
 
 });
