@@ -467,7 +467,7 @@
        console.log(pair[0]+ ', '+ pair[1]);
     }
     $.post("api/customer/store", $("#create-form").serialize(), function(data) {
-        alert(data);
+        console.log(data);
     });
     return false
   }
