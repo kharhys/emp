@@ -23,10 +23,10 @@
       <div class="fab-modal-shadow-surogate"></div>
       <div class="fab-modal-container inactive" id="dialog">
         <div class="fab-modal-inner">
-          <button class="inactive"><i class="material-icons fab inactive">add</i></button>
+          <button class="inactive dialog__btn"><i class="material-icons fab inactive">add</i></button>
           <div class="fab-modal-modal-content">
             <div class="bar">
-              <button class="active"><i class="material-icons fab active">cancel</i></button>
+              <button class="active dialog__btn"><i class="material-icons fab active">cancel</i></button>
               <h2 class="mdl-card__title-text">Create new customer</h2>
             </div>
             <div class="content">
@@ -385,7 +385,7 @@
   }(jQuery));
 
   $(document).ready(function() {
-    $("#dialog .bar > button").click(function() {
+    $("#dialog .dialog__btn").click(function() {
       if (!$("#dialog").hasClass("active")) {
         $("#dialog").addClass("active");
         $("#dialog").removeClass("inactive");
