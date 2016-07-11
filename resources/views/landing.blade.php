@@ -5,7 +5,7 @@
     <link href="landing.css" rel="stylesheet" type="text/css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
   </head>
-  <?php print_r($response); ?>
+  <?php if ($response) { print_r($response);  } ?>
   <body>
     <div class="wrapper">
     	<div class="container">
