@@ -90,13 +90,12 @@
 
       <div class="demo-btns">
 
-        <?php if ($customer): ?>
-          @include('modal')
-        <?php endif; ?>
-
         <div class="info">
           <div class="buttons">
             <ul class="list hidden">
+              <?php if ($customer): ?>
+                @include('trigger')
+              <?php endif; ?>
               <?php foreach ($customers as $customer): ?>
                 <li class="item">
                   <span>
@@ -126,6 +125,9 @@
           </div>
         </div>
 
+        <?php if ($customer): ?>
+          @include('modal')
+        <?php endif; ?>
 
         <?php foreach ($customers as $customer): ?>
           <!-- Modal -->
@@ -229,6 +231,7 @@
         $("body").removeClass("modal-open");
       }
     })
+    $("#modal__default_trigger").click();
   })
   var Modal = (function() {
 

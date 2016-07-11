@@ -1,4 +1,4 @@
-<div id="<?= 'modal'.$customer['id']; ?>" class="modal modal__bg modal--active" role="dialog" aria-hidden="true">
+<div id="<?= 'modal'.'__default'; ?>" class="modal modal__bg modal--active" role="dialog" aria-hidden="true">
   <div class="modal__dialog" style="width: 70vw;">
     <div class="modal__content modal__content--active">
       <div class="fab-modal-modal-content" style="width: auto; color: #191919; margin-top: 2rem;">
