@@ -10,7 +10,7 @@ use App\Http\Controllers\Controller;
 class SiteController extends Controller {
 
   public function index(Request $request) {
-    return view('landing');
+    return view('landing', [ 'response' => 'requested']);
   }
 
   public function login(Request $request) {
