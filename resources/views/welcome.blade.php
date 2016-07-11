@@ -46,6 +46,7 @@
         <div class="info">
           <div class="buttons">
             <ul class="list hidden">
+
               <?php if ($customer): ?>
                 @include('customer.trigger')
               <?php else: ?>
@@ -84,7 +85,7 @@
         <?php if ($customer): ?>
           @include('customer.modal')
         <?php else: ?>
-          @include('customer.new')
+          @include('customer.form')
         <?php endif; ?>
 
         <?php foreach ($customers as $cust): ?>
