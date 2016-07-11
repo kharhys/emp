@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use JWTAuth;
+use Validator;
 use App\Customer;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -22,7 +23,7 @@ class SiteController extends Controller {
     ]);
 
     if($validator->fails()) {
-      throw new ValidationHttpException($validator->errors()->all());
+      return view('landing', [ 'response' => 'ValidationHttpException']);
     }
 
     try {
