@@ -5,11 +5,11 @@
     <link href="landing.css" rel="stylesheet" type="text/css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
   </head>
-  <?php if ($response) { print_r($response);  } ?>
   <body>
     <div class="wrapper">
     	<div class="container">
     		<h1>Welcome</h1>
+        <?php print_r($response); ?>
 
     		<form class="form">
     			<input type="text" placeholder="Username">
