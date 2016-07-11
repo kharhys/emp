@@ -18,9 +18,7 @@
         Manage Customers
       </h1>
     </header>
-    <?php if ($customer): ?>
-      @include('modal')
-    <?php endif; ?>
+
     <div class="fab-modal-backdrop">
       <div class="fab-modal-shadow-surogate"></div>
       <div class="fab-modal-container inactive" id="dialog">
@@ -91,6 +89,11 @@
     <div class="main">
 
       <div class="demo-btns">
+
+        <?php if ($customer): ?>
+          @include('modal')
+        <?php endif; ?>
+
         <div class="info">
           <div class="buttons">
             <ul class="list hidden">

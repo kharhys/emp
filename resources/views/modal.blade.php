@@ -1,9 +1,9 @@
 <div id="<?= 'modal'.$customer['id']; ?>" class="modal modal__bg modal--active" role="dialog" aria-hidden="true">
-  <div class="modal__dialog">
+  <div class="modal__dialog" style="width: 70vw;">
     <div class="modal__content modal__content--active">
       <div class="fab-modal-modal-content" style="width: auto; color: #191919; margin-top: 2rem;">
         <div class="bar" style="padding: 1rem; background: rgba(0,0,0,0.3);">
-          <h2 class="mdl-card__title-text">Update Customer</h2>
+          <h2 class="mdl-card__title-text">Manage Customer</h2>
         </div>
         <div class="content" style="overflow-y: auto;">
           <div class="form-container" >
@@ -52,7 +52,7 @@
               </fieldset>
 
               <div class="form-footer">
-                <input type="submit" class="btn" value="Submit" />
+                <input type="submit" class="btn" value="Update" />
               </div>
             </form>
           </div>
@@ -71,8 +71,8 @@
           left: 0;
           color: #ffffff;
           font-size: 2rem;
-              cursor: pointer;
-              background: #f91f69;
+          cursor: pointer;
+          background: #f91f69;
           border-radius: 50%;
           margin: 0.3em;
       ">delete_forever</i>
