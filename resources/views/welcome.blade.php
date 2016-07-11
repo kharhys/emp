@@ -85,7 +85,7 @@
         <?php if ($customer): ?>
           @include('customer.modal')
         <?php else: ?>
-          @include('customer.form')
+          @include('customer.new')
         <?php endif; ?>
 
         <?php foreach ($customers as $cust): ?>
