@@ -28,6 +28,7 @@
 }
 .steps-form .step-form.active {
   visibility: visible;
+  left: 0 !important;
 }
 
 
