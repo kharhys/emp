@@ -1,24 +1,33 @@
 <form class = "steps-form">
   <div class = "step-form" data-next = ".step-form.step-two">
-    <h2>Step 1</h2>
-    <input type="email" placeholder = "Correo electrónico" class = "form-input">
-    <input type="password" placeholder = "Contraseña" class = "form-input">
-    <input type="password" placeholder = "Confirmar contraseña" class = "form-input">
-    <button class = "form-input btn next-step" type = "button">Continuar</button>
+    <h2>Customer Details</h2>
+    <input type="text" name="first_name" placeholder = "First Name" class = "form-input">
+    <input type="text" name="last_name" placeholder = "Last Name" class = "form-input">
+    <input type="text" name="date_of_birth" placeholder = "Date Of Birth Name" class = "form-input">
+    <input type="text" name="phone_number" placeholder = "Phone Number" class = "form-input">
+    <input type="text" name="mobile_number" placeholder = "Mobile Number" class = "form-input">
+    <input type="text" name="nationality" placeholder = "Nationality" class = "form-input">
+    <input type="text" name="passport_number" placeholder = "Passport Number" class = "form-input">
+    <input type="text" name="emirates_id" placeholder = "Emirates ID" class = "form-input">
+    <button class = "form-input btn next-step" type = "button">Next</button>
   </div>
   <div class = "step-form step-two" data-next = ".step-form.step-three">
-    <h2>Step 2</h2>
-    <input type="email" placeholder = "Correo electrónico" class = "form-input">
-    <input type="password" placeholder = "Contraseña" class = "form-input">
-    <input type="password" placeholder = "Confirmar contraseña" class = "form-input">
-    <button class = "form-input btn next-step" type = "button">Continuar</button>
+    <h2>Property Details</h2>
+    <input type="text" name="tower_name" placeholder = "Tower Name" class = "form-input">
+    <input type="text" name="apartment_number" placeholder = "Apartment Number" class = "form-input">
+    <input type="text" name="area_sq_ft" placeholder = "Area In Sq. Ft." class = "form-input">
+    <input type="text" name="contract_date" placeholder = "Contract Date" class = "form-input">
+    <input type="text" name="address_one" placeholder = "Address 1" class = "form-input">
+    <input type="text" name="address_two" placeholder = "Address 2" class = "form-input">
+    <input type="text" name="city" placeholder = "City" class = "form-input">
+    <input type="text" name="postal_address" placeholder = "P.O. Box" class = "form-input">
+    <input type="text" name="email_address" placeholder = "Email Address" class = "form-input">
+    <button class = "form-input btn next-step" type = "button">Next</button>
   </div>
   <div class = "step-form step-three">
-    <h2>Final Step</h2>
-    <input type="text" placeholder = "Nombre" class = "form-input">
-    <input type="text" placeholder = "Dirección" class = "form-input">
-    <input type="phone" placeholder = "Celular" class = "form-input">
-    <input type="text" placeholder = "Rut" class = "form-input">
-    <button type = "submit" class = "form-input btn">Registrar</button>
+    <h2>Attach Documents</h2>
+    <input type="file" placeholder = "Attach Passport Copy" class = "form-input">
+    <input type="file" placeholder = "Attach Contract Copy" class = "form-input">
+    <button type = "submit" class = "form-input btn">Submit</button>
   </div>
 </form>
