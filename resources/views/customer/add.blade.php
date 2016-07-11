@@ -1,4 +1,4 @@
-<li class="item" style="display: none">
+<li class="item">
   <span>
     <div class="ios-dl">
       <div class="definition-group">
