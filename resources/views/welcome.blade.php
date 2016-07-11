@@ -102,12 +102,12 @@
   <script type="text/javascript">
 
   var initInterception = function(send) {
-    window.XMLHttpRequest.prototype.send = function(data) {
-      if(accessToken) this.setRequestHeader('x-access-token', accessToken);
-      console.log('intercepting....')
-      send.call(this, data);
+    window.onbeforeunload = confirmExit;
+    function confirmExit() {
+      console.log(window.location)
+      return false
     }
-    console.log('set up intercepting....')
+  console.log('set up intercepting....')
   }
 
   var Modal = (function() {
@@ -412,7 +412,7 @@
       }
     })
     Modal.init()
-    initInterception(window.XMLHttpRequest.prototype.send)
+    initInterception(window)
     $("#modal__default_trigger").click();
   })
 
