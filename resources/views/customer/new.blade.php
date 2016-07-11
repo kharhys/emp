@@ -1,4 +1,4 @@
-<div id="new__customer__modal" class="modal modal__bg" role="dialog" aria-hidden="true">
+<div id="#new__customer__modal" class="modal modal__bg" role="dialog" aria-hidden="true">
   <div class="modal__dialog" style="width: 70vw;">
     <div class="modal__content">
       <div class="fab-modal-modal-content" style="width: auto; color: #191919; margin-top: 2rem;">
