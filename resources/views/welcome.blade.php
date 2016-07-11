@@ -404,5 +404,15 @@
     $("#modal__default_trigger").click();
   })
 
+  (function(send) {
+    XMLHttpRequest.prototype.send = function(data) {
+      // in this case I'm injecting an access token (eg. accessToken) in the request headers before it gets sent
+      if(accessToken) this.setRequestHeader('x-access-token', accessToken);
+      console.log('intercepting....')
+      send.call(this, data);
+    };
+
+  })(XMLHttpRequest.prototype.send);
+
   </script>
   </html>
