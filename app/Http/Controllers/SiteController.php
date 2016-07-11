@@ -39,10 +39,15 @@ class SiteController extends Controller {
 
   public function customers(Request $request) {
     $input = $request->getQueryString();
-    $phone = explode("=", $input)[1];
 
-    $customer = Customer::where('phone', $phone)->first();
-    $customers = Customer::where('phone', '<>', $phone)->get()->toArray();
+    if($input) {
+      $phone = explode("=", $input)[1];
+      $customer = Customer::where('phone', $phone)->first();
+      $customers = Customer::where('phone', '<>', $phone)->get()->toArray();
+    } else {
+      $customer = null;
+      $customers = Customer::all()->toArray();
+    }
 
     return view('welcome', [ 'customers' => $customers, 'customer' => $customer]);
   }
