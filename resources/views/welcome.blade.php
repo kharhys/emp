@@ -18,6 +18,9 @@
         Manage Customers
       </h1>
     </header>
+    <?php if ($customer): ?>
+      @include('modal')
+    <?php endif; ?>
     <div class="fab-modal-backdrop">
       <div class="fab-modal-shadow-surogate"></div>
       <div class="fab-modal-container inactive" id="dialog">
