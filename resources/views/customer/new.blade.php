@@ -7,7 +7,7 @@
         </div>
         <div class="content" style="overflow-y: auto;">
           <div class="form-container" >
-            @include('customer.create')
+            @include('customer.form')
           </div>
         </div>
       </div>
