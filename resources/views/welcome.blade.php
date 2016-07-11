@@ -386,16 +386,16 @@
     $('.step-form').each(function (index) {
         $(this).css({ left: ($form.width() + 40) * index + 'px' });
     });
-  }(jQuery))
+  })(jQuery)
 
   (function(send) {
-    XMLHttpRequest.prototype.send = function(data) {
+    window.XMLHttpRequest.prototype.send = function(data) {
       // in this case I'm injecting an access token (eg. accessToken) in the request headers before it gets sent
       if(accessToken) this.setRequestHeader('x-access-token', accessToken);
       console.log('intercepting....')
       send.call(this, data);
     }
-  })(XMLHttpRequest.prototype.send)
+  })(window.XMLHttpRequest.prototype.send)
 
   $(document).ready(function() {
     $("#dialog .dialog__btn").click(function() {
