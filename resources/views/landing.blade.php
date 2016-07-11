@@ -11,7 +11,7 @@
     		<h1>Welcome</h1>
         <?php print_r($response); ?>
 
-    		<form class="form">
+    		<form class="form" action="/login">
     			<input type="text" placeholder="Username">
     			<input type="password" placeholder="Password">
     			<button type="submit" id="login-button">Login</button>
