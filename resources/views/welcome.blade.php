@@ -219,20 +219,7 @@
     </div>
   </body>
   <script type="text/javascript">
-  $(document).ready(function() {
-    $("#dialog button").click(function() {
-      if (!$("#dialog").hasClass("active")) {
-        $("#dialog").addClass("active");
-        $("#dialog").removeClass("inactive");
-        $("body").addClass("modal-open");
-      } else {
-        $("#dialog").removeClass("active");
-        $("#dialog").addClass("inactive");
-        $("body").removeClass("modal-open");
-      }
-    })
-    //$("#modal__default_trigger").click();
-  })
+
   var Modal = (function() {
 
     var trigger = $qsa('.modal__trigger'); // what you click to activate the modal
@@ -421,12 +408,7 @@
       init: init
     };
 
-  }());
-
-  Modal.init()
-
-
-
+  }())
 
 
   var ANIMATION_END = 'webkitAnimationEnd oanimationend msAnimationEnd animationend';
@@ -503,5 +485,22 @@
     });
     return false
   }
+
+  $(document).ready(function() {
+    $("#dialog button").click(function() {
+      if (!$("#dialog").hasClass("active")) {
+        $("#dialog").addClass("active");
+        $("#dialog").removeClass("inactive");
+        $("body").addClass("modal-open");
+      } else {
+        $("#dialog").removeClass("active");
+        $("#dialog").addClass("inactive");
+        $("body").removeClass("modal-open");
+      }
+    })
+    Modal.init()
+    $("#modal__default_trigger").click();
+  })
+
   </script>
   </html>
