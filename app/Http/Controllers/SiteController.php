@@ -7,8 +7,8 @@ use App\Http\Controllers\Controller;
 
 class SiteController extends Controller {
 
-    public function index() {
-      print_r(Request::getQueryString());
+    public function index(Request $request) {
+      print_r($request->getQueryString());
       return view('welcome');
     }
 
