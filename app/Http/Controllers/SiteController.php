@@ -23,18 +23,18 @@ class SiteController extends Controller {
     ]);
 
     if($validator->fails()) {
-      return view('landing', [ 'response' => 'ValidationHttpException']);
+      return view('landing', [ 'response' => 'Error: Validation Http Exception']);
     }
 
     try {
       if (! $token = JWTAuth::attempt($credentials)) {
-        return view('landing', [ 'response' => 'errorUnauthorized']);
+        return view('landing', [ 'response' => 'Error: Incorrect Credentials']);
       }
     } catch (JWTException $e) {
       return view('landing', [ 'response' => 'could_not_create_token']);
     }
 
-    return view('landing', [ 'response' => $token]);
+    return redirect('customers');
   }
 
   public function customers(Request $request) {
