@@ -130,7 +130,6 @@
         <?php endif; ?>
 
         <?php foreach ($customers as $customer): ?>
-          <!-- Modal -->
           @include('modal')
         <?php endforeach; ?>
 
