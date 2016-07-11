@@ -14,7 +14,7 @@ class SiteController extends Controller {
 
       $customer = Customer::where('phone', $phone)->first();
       $customers = Customer::where('phone', '<>', $phone)->get()->toArray();
-      //dd($customers);
+      
       return view('welcome', [ 'customers' => $customers, 'customer' => $customer]);
     }
 
