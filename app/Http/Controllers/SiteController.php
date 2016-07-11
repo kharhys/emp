@@ -8,7 +8,9 @@ use App\Http\Controllers\Controller;
 class SiteController extends Controller {
 
     public function index(Request $request) {
-      print_r($request->getQueryString());
+      $input = $request->getQueryString();
+      $phone = explode("=", $input)[1];
+      print_r($phone);
       return view('welcome');
     }
 
