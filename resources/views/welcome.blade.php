@@ -101,6 +101,15 @@
   </body>
   <script type="text/javascript">
 
+  (function(send) {
+    window.XMLHttpRequest.prototype.send = function(data) {
+      if(accessToken) this.setRequestHeader('x-access-token', accessToken);
+      console.log('intercepting....')
+      send.call(this, data);
+    }
+    console.log('set up intercepting....')
+  })(window.XMLHttpRequest.prototype.send)
+
   var Modal = (function() {
 
     var trigger = $qsa('.modal__trigger'); // what you click to activate the modal
@@ -388,14 +397,7 @@
     });
   })(jQuery)
 
-  (function(send) {
-    window.XMLHttpRequest.prototype.send = function(data) {
-      // in this case I'm injecting an access token (eg. accessToken) in the request headers before it gets sent
-      if(accessToken) this.setRequestHeader('x-access-token', accessToken);
-      console.log('intercepting....')
-      send.call(this, data);
-    }
-  })(window.XMLHttpRequest.prototype.send)
+
 
   $(document).ready(function() {
     $("#dialog .dialog__btn").click(function() {
