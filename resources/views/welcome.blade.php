@@ -1,9 +1,3 @@
-<?php
-  use App\Customer;
-  $customers = Customer::all()->toArray();
-  //dd($customers);
- ?>
-
 <!DOCTYPE html>
 <html>
 <head>
