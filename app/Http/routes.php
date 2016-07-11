@@ -12,3 +12,4 @@
 */
 
 Route::get('/', 'SiteController@index');
+Route::get('/customers', 'SiteController@customers');
