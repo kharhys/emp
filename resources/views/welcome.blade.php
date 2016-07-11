@@ -231,7 +231,7 @@
         $("body").removeClass("modal-open");
       }
     })
-    $("#modal__default_trigger").click();
+    //$("#modal__default_trigger").click();
   })
   var Modal = (function() {
 
