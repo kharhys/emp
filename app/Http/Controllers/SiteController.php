@@ -49,7 +49,7 @@ class SiteController extends Controller {
       $customers = Customer::all()->toArray();
     }
 
-    return view('welcome', [ 'customers' => $customers, 'customer' => $customer]);
+    return view('welcome', [ 'customers' => $customers, 'customer' => $customer, 'input' => $input]);
   }
 
 }

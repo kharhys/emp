@@ -50,7 +50,9 @@
               <?php if ($customer): ?>
                 @include('customer.trigger')
               <?php else: ?>
-                @include('customer.add')
+                <?php if ($input): ?>
+                  @include('customer.add')
+                <?php endif; ?>
               <?php endif; ?>
 
               <?php foreach ($customers as $cust): ?>
@@ -85,7 +87,9 @@
         <?php if ($customer): ?>
           @include('customer.modal')
         <?php else: ?>
-          @include('customer.new')
+          <?php if ($input): ?>
+            @include('customer.new')
+          <?php endif; ?>
         <?php endif; ?>
 
         <?php foreach ($customers as $cust): ?>
