@@ -94,7 +94,7 @@
           <div class="buttons">
             <ul class="list hidden">
               <?php if ($customer): ?>
-                @include('trigger')
+                @include('customer.trigger')
               <?php endif; ?>
               <?php foreach ($customers as $cust): ?>
                 <li class="item">
@@ -126,7 +126,7 @@
         </div>
 
         <?php if ($customer): ?>
-          @include('modal')
+          @include('customer.modal')
         <?php endif; ?>
 
         <?php foreach ($customers as $cust): ?>
