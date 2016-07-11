@@ -366,6 +366,7 @@
   (function ($) {
     $(document).on('ready', function () {
         $('.next-step').on('click', function (evt) {
+          console.log('.next-step')
             evt.preventDefault();
             var $this = $(evt.currentTarget);
             var $currentStep = $this.closest('.step-form');
