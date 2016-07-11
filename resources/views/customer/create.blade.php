@@ -26,8 +26,10 @@
   </div>
   <div class = "step-form step-three">
     <h2>Attach Documents</h2>
-    <input type="file" placeholder = "Attach Passport Copy" class = "form-input">
-    <input type="file" placeholder = "Attach Contract Copy" class = "form-input">
+    <label for="occupation"> <span data-text="Occupation">Attach Passport Copy</span>  </label>
+    <input name="passport_attachment" type="file" placeholder = "" class = "form-input">
+    <label for="occupation"> <span data-text="Occupation">Attach Contract Copy</span>  </label>
+    <input name="contract_attachment" type="file" placeholder = "" class = "form-input">
     <button type = "submit" class = "form-input btn">Submit</button>
   </div>
 </form>

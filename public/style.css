@@ -2,7 +2,7 @@
   overflow: hidden;
   white-space: nowrap;
   position: relative;
-  height: 400px;
+  height: 100vh;
   margin: 0 auto;
 }
 .steps-form .step-form {
