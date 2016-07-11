@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html>
-  @include('head')
+  <head>
+    <title>Customer Management Portal</title>
+    <link href="landing.css" rel="stylesheet" type="text/css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+  </head>
   <body>
     <div class="wrapper">
     	<div class="container">
