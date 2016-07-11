@@ -129,9 +129,6 @@
           @include('modal')
         <?php endif; ?>
 
-        <?php foreach ($customers as $customer): ?>
-          @include('modal')
-        <?php endforeach; ?>
 
       </div>
     </div>
