@@ -12,8 +12,8 @@
         <?php print_r($response); ?>
 
     		<form class="form" action="/login">
-    			<input type="text" placeholder="Username">
-    			<input type="password" placeholder="Password">
+    			<input name="email" type="text" placeholder="Username">
+    			<input name="password" type="password" placeholder="Password">
     			<button type="submit" id="login-button">Login</button>
     		</form>
     	</div>
