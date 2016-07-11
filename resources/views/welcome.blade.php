@@ -133,7 +133,7 @@
             <div class="modal__dialog">
               <div class="modal__content">
                 <div class="fab-modal-modal-content" style="width: auto; color: #191919; margin-top: 2rem;">
-                  <div class="bar" style="padding: 1rem;">
+                  <div class="bar" style="padding: 1rem; background: rgba(0,0,0,0.3);">
                     <h2 class="mdl-card__title-text">Update Customer</h2>
                   </div>
                   <div class="content" style="overflow-y: auto;">
