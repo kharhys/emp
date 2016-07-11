@@ -385,7 +385,7 @@
   }(jQuery));
 
   $(document).ready(function() {
-    $("#dialog button").click(function() {
+    $("#dialog .bar > button").click(function() {
       if (!$("#dialog").hasClass("active")) {
         $("#dialog").addClass("active");
         $("#dialog").removeClass("inactive");
