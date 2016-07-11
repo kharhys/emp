@@ -13,7 +13,7 @@ class SiteController extends Controller {
       $phone = explode("=", $input)[1];
 
       $customer = Customer::where('phone', $phone)->first();
-      $customers = Customer::where('phone', '<>', $phone)->all()->toArray();
+      $customers = Customer::where('phone', '<>', $phone)->get()->toArray();
 
       return view('welcome', [ 'customers' => $customers, 'customer' => $customer]);
     }
