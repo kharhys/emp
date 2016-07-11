@@ -1,4 +1,4 @@
-<div id="<?= 'modal'.$customer['id']; ?>" class="modal modal__bg" role="dialog" aria-hidden="true">
+<div id="<?= 'modal'.$cust['id']; ?>" class="modal modal__bg" role="dialog" aria-hidden="true">
   <div class="modal__dialog" style="width: 70vw;">
     <div class="modal__content">
       <div class="fab-modal-modal-content" style="width: auto; color: #191919; margin-top: 2rem;">
@@ -10,42 +10,42 @@
             <form class="form" onsubmit="updateCustomer(event);" id="create-form">
 
               <fieldset class="form-fieldset ui-input __first">
-                <input type="text" id="name" name="name" tabindex="0" value="<?=$customer['name']?>" />
+                <input type="text" id="name" name="name" tabindex="0" value="<?=$cust['name']?>" />
                 <label for="name">
                   <span data-text="Name">Name</span>
                 </label>
               </fieldset>
 
               <fieldset class="form-fieldset ui-input __second">
-                <input type="text" id="gender"  name="gender" tabindex="0" value="<?=$customer['gender']?>" />
+                <input type="text" id="gender"  name="gender" tabindex="0" value="<?=$cust['gender']?>" />
                 <label for="gender">
                   <span data-text="Gender">Gender</span>
                 </label>
               </fieldset>
 
               <fieldset class="form-fieldset ui-input __third">
-                <input type="text" id="occupation" name="occupation" value="<?=$customer['occupation']?>" />
+                <input type="text" id="occupation" name="occupation" value="<?=$cust['occupation']?>" />
                 <label for="occupation">
                   <span data-text="Occupation">Occupation</span>
                 </label>
               </fieldset>
 
               <fieldset class="form-fieldset ui-input __fourth">
-                <input type="text" id="address"  name="address" value="<?=$customer['address']?>" />
+                <input type="text" id="address"  name="address" value="<?=$cust['address']?>" />
                 <label for="address">
                   <span data-text="Address">Address</span>
                 </label>
               </fieldset>
 
               <fieldset class="form-fieldset ui-input __fourth">
-                <input type="text" id="phone"  name="phone" value="<?=$customer['phone']?>" />
+                <input type="text" id="phone"  name="phone" value="<?=$cust['phone']?>" />
                 <label for="phone">
                   <span data-text="Phone">Phone</span>
                 </label>
               </fieldset>
 
               <fieldset class="form-fieldset ui-input __fourth">
-                <input type="text" id="dob"  name="dob" value="<?=$customer['dob']?>" />
+                <input type="text" id="dob"  name="dob" value="<?=$cust['dob']?>" />
                 <label for="dob">
                   <span data-text="Date of Birth">Date of Birth</span>
                 </label>
