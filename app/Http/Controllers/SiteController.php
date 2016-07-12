@@ -33,14 +33,13 @@ class SiteController extends Controller {
     } catch (JWTException $e) {
       return view('landing', [ 'response' => 'could_not_create_token']);
     }
-    print_r($token); die();
-    return redirect('customers', [ 'token' => $token ]);
+    return redirect('customers')->with('token', $token);
   }
 
   public function customers(Request $request) {
     $input = $request->getQueryString();
     $token = $request->header('Authorization');
-    print_r($token);
+    print_r(Session::get('token')); die();
 
     if(!$token) { return redirect('/'); }
 
