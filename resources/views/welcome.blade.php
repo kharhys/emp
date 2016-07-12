@@ -106,8 +106,8 @@
   var initInterception = function(send) {
     window.onbeforeunload = confirmExit;
     function confirmExit() {
-      console.log(window.location)
-      //var url = 
+      var url = window.location.href + "?token=" + window.token
+      console.log(url)
       return false
     }
   console.log('set up intercepting....')
