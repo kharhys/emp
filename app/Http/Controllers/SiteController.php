@@ -11,7 +11,7 @@ use App\Http\Controllers\Controller;
 class SiteController extends Controller {
 
   public function index(Request $request) {
-    return view('landing', [ 'response' => 'requested']);
+    return view('landing', [ 'response' => 'Login to Continue']);
   }
 
   public function login(Request $request) {
@@ -41,6 +41,8 @@ class SiteController extends Controller {
     $input = $request->getQueryString();
     $token = $request->header('Authorization');
     print_r($token);
+
+    if(!$token) { return redirect('index'); }
 
     if($input) {
       $phone = explode("=", $input)[1];
