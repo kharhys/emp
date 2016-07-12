@@ -33,7 +33,7 @@ class SiteController extends Controller {
     } catch (JWTException $e) {
       return view('landing', [ 'response' => 'could_not_create_token']);
     }
-
+    print_r($token); die();
     return redirect('customers', [ 'token' => $token ]);
   }
 
