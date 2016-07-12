@@ -18,7 +18,6 @@
     <header>
       <h1>
         Manage Customers
-        <?php print_r($token) ?>
       </h1>
     </header>
 
@@ -415,7 +414,7 @@
       }
     })
     Modal.init()
-    initInterception(window)
+    //initInterception(window)
     $("#modal__default_trigger").click();
   })
 
