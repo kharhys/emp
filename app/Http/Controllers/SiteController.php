@@ -42,7 +42,7 @@ class SiteController extends Controller {
     $token = $request->header('Authorization');
     print_r($token);
 
-    if(!$token) { return redirect('index'); }
+    if(!$token) { return redirect('/'); }
 
     if($input) {
       $phone = explode("=", $input)[1];
