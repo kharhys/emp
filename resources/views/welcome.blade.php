@@ -18,6 +18,7 @@
     <header>
       <h1>
         Manage Customers
+        <?php print_r($token) ?>
       </h1>
     </header>
 
