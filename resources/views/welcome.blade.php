@@ -105,11 +105,11 @@
 
   var initInterception = function(send) {
     window.setTimeout(function () { // escape function context
-       window.location = 'http://bbc.co.uk';
-   }, 0);
-   window.onbeforeunload = null;   // necessary to prevent infinite loop
-                                   // that kills your browser
-   return 'Press "Stay On Page" to go to BBC website!';
+      var url = window.location.href + "?token=" + window.token
+      window.location = url;
+    }, 0);
+    window.onbeforeunload = null;
+    return 'Press "Stay On Page" to go to home';
     /*
     window.onbeforeunload = confirmExit;
     function confirmExit() {
