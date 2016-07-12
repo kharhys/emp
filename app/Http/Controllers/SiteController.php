@@ -34,11 +34,13 @@ class SiteController extends Controller {
       return view('landing', [ 'response' => 'could_not_create_token']);
     }
 
-    return redirect('customers');
+    return redirect('customers', [ 'token' => $token ]);
   }
 
   public function customers(Request $request) {
     $input = $request->getQueryString();
+    $token = Request::header('Authorization');
+    dd($token);
 
     if($input) {
       $phone = explode("=", $input)[1];
@@ -49,7 +51,7 @@ class SiteController extends Controller {
       $customers = Customer::all()->toArray();
     }
 
-    return view('welcome', [ 'customers' => $customers, 'customer' => $customer, 'input' => $input]);
+    return view('welcome', [ 'token' => $token, 'customers' => $customers, 'customer' => $customer, 'input' => $input]);
   }
 
 }

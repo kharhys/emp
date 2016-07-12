@@ -8,8 +8,10 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
   <link href="https://code.getmdl.io/1.1.3/material.indigo-pink.min.css" rel="stylesheet" type="text/css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-  <style>
-  </style>
+  <script type="text/javascript">
+    window.token = "<?=$token ?>"
+    console.log(window.token)
+  </script>
 </head>
 <body>
   <div class="container">
