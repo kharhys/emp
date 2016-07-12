@@ -38,8 +38,7 @@ class SiteController extends Controller {
 
   public function customers(Request $request) {
     $input = $request->getQueryString();
-    $token = $request->header('Authorization');
-    print_r(\Session::get('token')); die();
+    $token = \Session::get('token');
 
     if(!$token) { return redirect('/'); }
 
