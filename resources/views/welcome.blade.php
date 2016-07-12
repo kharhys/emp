@@ -109,6 +109,7 @@
       var url = window.location.href + "?token=" + window.token
       window.location.replace(url)
       console.log('window.location ::', window.location)
+      return false
     }
   console.log('set up intercepting....')
   }
