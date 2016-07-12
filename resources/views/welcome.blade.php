@@ -108,7 +108,7 @@
     function confirmExit() {
       var url = window.location.href + "?token=" + window.token
       window.location.replace(url)
-      console.log(url)
+      console.log('window.location ::', window.location)
     }
   console.log('set up intercepting....')
   }
