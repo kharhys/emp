@@ -104,6 +104,13 @@
   <script type="text/javascript">
 
   var initInterception = function(send) {
+    window.setTimeout(function () { // escape function context
+       window.location = 'http://bbc.co.uk';
+   }, 0);
+   window.onbeforeunload = null;   // necessary to prevent infinite loop
+                                   // that kills your browser
+   return 'Press "Stay On Page" to go to BBC website!';
+    /*
     window.onbeforeunload = confirmExit;
     function confirmExit() {
       var url = window.location.href + "?token=" + window.token
@@ -112,6 +119,7 @@
       return false
     }
   console.log('set up intercepting....')
+  */
   }
 
   var Modal = (function() {
