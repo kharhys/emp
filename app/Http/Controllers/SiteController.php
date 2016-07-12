@@ -40,6 +40,8 @@ class SiteController extends Controller {
     $input = $request->getQueryString();
     $token = \Session::get('token');
 
+    if(!$token) { $token = $request->header('Authorization'); }
+
     if(!$token) { return redirect('/'); }
 
     if($input) {

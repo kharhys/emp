@@ -107,6 +107,7 @@
     window.onbeforeunload = confirmExit;
     function confirmExit() {
       console.log(window.location)
+      //var url = 
       return false
     }
   console.log('set up intercepting....')
@@ -414,7 +415,7 @@
       }
     })
     Modal.init()
-    //initInterception(window)
+    initInterception(window)
     $("#modal__default_trigger").click();
   })
 
