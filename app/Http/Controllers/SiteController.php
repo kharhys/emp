@@ -40,6 +40,7 @@ class SiteController extends Controller {
   public function customers(Request $request) {
     $input = $request->getQueryString();
     $token = Request::header('Authorization');
+    print_r($token); die();
 
     if($input) {
       $phone = explode("=", $input)[1];
