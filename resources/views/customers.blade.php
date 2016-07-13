@@ -9,7 +9,7 @@
   <body>
     <div class="page">
       <!--
-      <header>
+      <header class="main-header">
         <div class="wrap">
           <h1>Material Header</h1>
         </div>
@@ -30,7 +30,9 @@
           <article>
 
             <div class="container">
-              <header>  <h1> Manage Customers  </h1> </header>
+              <header class="page-header">
+                <h1> Manage Customers  </h1>
+              </header>
 
               <div class="fab-modal-backdrop">
                 <div class="fab-modal-shadow-surogate"></div>
