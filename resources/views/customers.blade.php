@@ -30,9 +30,36 @@
         <div class="info">
           <div class="buttons">
             <ul class="list hidden">
+
+              <?php foreach ($customers as $cust): ?>
+                <li class="item">
+                  <span>
+                    <div class="ios-dl">
+                      <div class="definition-group">
+                        <dl class="dl-horizontal">
+                          <dt>Name</dt>
+                          <dd><?=$cust['name']?></dd>
+                        </dl>
+                        <dl class="dl-horizontal">
+                          <dt>Gender</dt>
+                          <dd><?=$cust['gender']?></dd>
+                        </dl>
+                        <dl class="dl-horizontal">
+                          <dt>Occupation</dt>
+                          <dd><?=$cust['occupation']?></dd>
+                        </dl>
+                      </div>
+                    </div>
+                  </span>
+                  <span data-modal="<?= '#modal'.$cust['id']; ?>" class="modal__trigger">
+                    <i class="material-icons">more_vert</i>
+                  </span>
+                </li>
+              <?php endforeach; ?>
             </ul>
           </div>
         </div>
+
       </div>
     </div>
   </div>
