@@ -18,10 +18,10 @@
       <nav role='navigation'>
         <div class="wrap">
           <ul>
-            <li><a class="active" href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Clients</a></li>
-            <li><a href="#">Contact Us</a></li>
+            <li><a class="active" href="#">Customers</a></li>
+            <li><a href="#">Users</a></li>
+            <li><a href="#">Account</a></li>
+            <li><a href="#">Settings</a></li>
           </ul>
         </div>
       </nav>
