@@ -83,6 +83,7 @@
           if (targetSelector) {
             var $target = $currentStep.closest('.steps-form').find(targetSelector);
             $currentStep.css({ left: $currentStep.width() * -1 - 40 + 'px' });
+            $currentStep.removeClass('active');
             $target.addClass('active').css({ left: 0 });
           }
         });
