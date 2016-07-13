@@ -16,7 +16,7 @@ a {
 }
 .main-header {
   background-color: #3F51B5;
-  min-height: 200px;
+  height: 100px;
   display: flex;
   justify-content: left;
   align-items: center;
