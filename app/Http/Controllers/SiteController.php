@@ -38,12 +38,10 @@ class SiteController extends Controller {
   }
 
   public function customers(Request $request) {
-    $input = $request->getQueryString();
     $token = \Cookie::get('token');
-    print_r($token);
-
     if(!$token) { return redirect('/'); }
 
+    $input = $request->getQueryString();
     if($input) {
       $phone = explode("=", $input)[1];
       $customer = Customer::where('phone', $phone)->first();
@@ -53,7 +51,7 @@ class SiteController extends Controller {
       $customers = Customer::all()->toArray();
     }
 
-    return view('welcome', [ 'token' => $token, 'customers' => $customers, 'customer' => $customer, 'input' => $input]);
+    return view('customers', [ 'token' => $token, 'customers' => $customers, 'customer' => $customer, 'input' => $input]);
   }
 
 }
