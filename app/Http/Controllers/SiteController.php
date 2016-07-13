@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use JWTAuth;
 use Validator;
-use App\Customer;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -35,23 +34,6 @@ class SiteController extends Controller {
     }
     $cookie = \Cookie::make('token', $token, 60);
     return redirect('customers')->withCookie($cookie);
-  }
-
-  public function customers(Request $request) {
-    $token = \Cookie::get('token');
-    if(!$token) { return redirect('/'); }
-
-    $input = $request->getQueryString();
-    if($input) {
-      $phone = explode("=", $input)[1];
-      $customer = Customer::where('phone', $phone)->first();
-      $customers = Customer::where('phone', '<>', $phone)->get()->toArray();
-    } else {
-      $customer = null;
-      $customers = Customer::all()->toArray();
-    }
-
-    return view('customers', [ 'token' => $token, 'customers' => $customers, 'customer' => $customer, 'input' => $input]);
   }
 
 }

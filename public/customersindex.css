@@ -1,0 +1,216 @@
+/* Material design underlying rules */
+button {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+}
+
+.md-column-and-footer {
+  /*the column row and the bottom pagination row */
+  height: 56px;
+  color: rgba(0, 0, 0, 0.54);
+  font-size: 12px;
+  font-family: "Roboto Medium", Roboto, "Helvetica Neue", sans-serif;
+}
+.md-footer {
+  border-top: 1px solid rgba(0, 0, 0, 0.14);
+  padding-right: 14px;
+  padding-left: 24px;
+}
+.md-column {
+
+  padding-left: 24px;
+  padding-right: 24px;
+}
+.md-data-row {
+  /*Sizing*/
+  height: 48px;
+  padding-left: 24px;
+  padding-right: 24px;
+
+  border-top: 1px solid rgba(0, 0, 0, 0.14);
+  /*Fonts*/
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 13px;
+  font-family: "Roboto Regular", Roboto, "Helvetica Neue", sans-serif;
+}
+.md-table-header {
+  /*Sizing*/
+  height: 64px;
+  /*Spacing*/
+  padding: 0px 14px 0px 24px;
+}
+.md-card-title {
+  /*Fonts*/
+  font-size: 20px;
+  font-family: "Roboto Regular", Roboto, "Helvetica Neue", sans-serif;
+  color: rgba(0, 0, 0, 0.87);
+}
+.md-footer > div {
+  margin-top: 22px;
+  margin-left: 32px;
+}
+.md-data-row div,
+.md-column div {
+  margin-top: 18px;
+  margin-left: 0px;
+  margin-right: 56px;
+  color: inherit;
+  font-family: inherit;
+  text-align: left;
+}
+.md-data-row .md-checkbox,
+.md-data-row .md-rowname,
+.md-column .md-checkbox,
+.md-column .md-rowname {
+  margin-right: 24px !important;
+}
+.md-data-row:last-child,
+.md-column:last-child {
+  margin-right: 0px !important;
+}
+.md-checkbox {
+  width: 14px;
+  height: 14px;
+  border: 2px solid grey;
+  border-radius: 2px;
+}
+.md-numeric { text-align: right; }
+/******************/
+.mu-table-card {
+  width: 700px;
+  margin: 50px auto;
+  /*border: solid 1px grey;*/
+  border-radius: 2px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,.2),0 1px 1px 0 rgba(0,0,0,.14),0 2px 1px -1px rgba(0,0,0,.12);
+}
+/*******************************/
+.mu-table-header {
+  display: flex;
+  flex-direction: row;
+}
+
+.mu-table-title {
+  margin-top: 22px;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 700;
+  display: inline-block;
+}
+
+.mu-header-icons {
+  display: inline-block;
+  height: 24px;
+  width: 24px;
+  padding: 0px;
+  margin-top: 20px;
+  margin-left: 24px;
+  color: rgba(0, 0, 0, 0.54);
+}
+.mu-header-icons:hover {
+  border: grey 1px solid;
+  border-radius: 2px;
+}
+/**************************/
+.mu-column {
+  display: flex;
+  flex-direction: row;
+}
+
+.mu-data-row {
+  display: flex;
+  flex-direction: row;
+
+}
+.mu-rowname {
+  width: 180px;
+}
+.mu-footer {
+  display: flex;
+  flex-direction: row;
+}
+.mu-virtual-pagination {
+  display: flex;
+  flex-direction: row;
+}
+.mu-pagelength {
+  display: flex;
+  flex-direction: row;
+}
+
+.mu-virtual-pagination div {
+  width: 24px;
+}
+
+.mu-selected-pagenum {
+}
+
+.table__card {
+  margin: 3rem;
+  padding: 1rem;
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,.2),0 1px 1px 0 rgba(0,0,0,.14),0 2px 1px -1px rgba(0,0,0,.12);
+}
+
+.table__card table {
+  width: 100%;
+  padding: 1rem 0;
+  margin: 1rem 0;
+}
+.table__card table:after,
+.table__card table:before {
+  line-height:1.5em;
+  content:".";
+  color:white;
+  display:block;
+}
+
+.table__card table tbody tr {
+  color: rgba(0,0,0,0.8);
+}
+
+.table__card .dataTables_wrapper .dataTables_length {
+  float: right;
+  color: rgba(0,0,0,0.6);
+  border-bottom: 1px solid #d5d5d5;
+  padding-bottom: 0.5rem;
+  margin-top: 1rem !important;
+}
+
+.table__card .dataTables_wrapper .dataTables_filter {
+  float: left;
+}
+
+.table__card .dataTables_wrapper .dataTables_length,
+.table__card .dataTables_wrapper .dataTables_filter {
+  margin: 0.4rem 0;
+}
+
+.table__card table tfoot,
+.table__card table thead {
+  color: rgba(0, 0, 0, 0.54);
+}
+
+.table__card .dataTables_filter input {
+  margin-left: -3rem !important;
+  padding: 0.5rem 0;
+  border: none;
+  font-size: 1.1rem;
+  border-bottom: 1px solid #d5d5d5;
+}
+
+.table__card table.dataTable thead th,
+.table__card table.dataTable tfoot th {
+  border-top: 1px solid #d5d5d5;
+  border-bottom: 1px solid #d5d5d5;
+  padding: 1rem 0.6rem;
+  text-align: left;
+}
+
+.table__card table.dataTable.no-footer {
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #d5d5d5;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+}

@@ -7,6 +7,7 @@
     <link href="customers.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    @yield('head')
   </head>
   <body>
     <div class="page">
@@ -39,12 +40,11 @@
       <main>
         <div class="wrap">
           <article>
-
             @yield('page')
-
           </article>
         </div>
       </main>
     </div>
+    @yield('script')
   </body>
 </html>
