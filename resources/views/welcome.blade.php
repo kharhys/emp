@@ -424,7 +424,7 @@
       }
     })
     Modal.init()
-    initInterception(window)
+    //initInterception(window)
     $("#modal__default_trigger").click();
   })
 

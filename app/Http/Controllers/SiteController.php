@@ -33,14 +33,14 @@ class SiteController extends Controller {
     } catch (JWTException $e) {
       return view('landing', [ 'response' => 'could_not_create_token']);
     }
-    return redirect('customers')->with('token', $token);
+    $cookie = \Cookie::make('token', $token, 60);
+    return redirect('customers')->withCookie($cookie);
   }
 
   public function customers(Request $request) {
     $input = $request->getQueryString();
-    $token = \Session::get('token');
-
-    if(!$token) { $token = $request->header('Authorization'); }
+    $token = \Cookie::get('token');
+    print_r($token);
 
     if(!$token) { return redirect('/'); }
 
