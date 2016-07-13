@@ -9,9 +9,11 @@
   <body>
     <div class="page">
       <header>
+        <!--
         <div class="wrap">
           <h1>Material Header</h1>
         </div>
+      -->
       </header>
       <nav role='navigation'>
         <div class="wrap">
