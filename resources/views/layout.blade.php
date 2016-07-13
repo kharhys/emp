@@ -2,11 +2,11 @@
 <html>
   <head>
     <title>Customers</title>
-    <link rel="stylesheet" href="fab.css" type="text/css">
-    <link rel="stylesheet" href="bubbles.css" type="text/css" >
-    <link rel="stylesheet" href="customers.css" type="text/css">
-    <link rel="stylesheet" href="formsteps.css" media="screen" title="no title" charset="utf-8">
-    <link rel="stylesheet" href="customersindex.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="/fab.css" type="text/css">
+    <link rel="stylesheet" href="/bubbles.css" type="text/css" >
+    <link rel="stylesheet" href="/customers.css" type="text/css">
+    <link rel="stylesheet" href="/formsteps.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="/customersindex.css" media="screen" title="no title" charset="utf-8">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.11/css/jquery.dataTables.min.css" />
 
