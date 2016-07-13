@@ -216,14 +216,6 @@ button.inactive {
   font-weight: normal;
 }
 
-.container {
-  position: relative;
-  margin: 0;
-  padding: 0;
-  background: #fff;
-  min-height: 100vh;
-}
-
 .main {
   padding: 2em;
 }

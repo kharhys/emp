@@ -21,6 +21,7 @@ a {
   justify-content: left;
   align-items: center;
   text-align: center;
+  position: relative;
 }
 .main-header h1 {
   font-size: 3em;
