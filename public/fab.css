@@ -102,6 +102,9 @@
 .fab-modal-container.active .content {
   overflow-y: auto;
 }
+.fab-modal-container button a {
+  color: #fff;
+}
 .fab-modal-container button {
   border-radius: 50%;
   color: white;

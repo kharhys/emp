@@ -1,7 +1,7 @@
 @extends('layout')
 
 @section('head')
-  <link rel="stylesheet" href="formsteps.css" media="screen" title="no title" charset="utf-8">
+  
 @endsection
 
 @section('page')

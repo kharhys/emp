@@ -1,9 +1,6 @@
 @extends('layout')
 
 @section('head')
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.11/js/jquery.dataTables.min.js"> </script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.11/css/jquery.dataTables.min.css" />
-  <link rel="stylesheet" href="customersindex.css" media="screen" title="no title" charset="utf-8">
 @endsection
 
 @section('page')
