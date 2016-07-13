@@ -38,7 +38,7 @@ class CustomerController extends Controller {
     $token = \Cookie::get('token');
     if(!$token) { return redirect('/'); }
 
-    return view('customers.create', $res);
+    return view('customers.create');
   }
 
 }

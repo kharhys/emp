@@ -16,7 +16,9 @@
     <div class="fab-modal-shadow-surogate"></div>
     <div class="fab-modal-container inactive" id="dialog">
       <div class="fab-modal-inner">
-        <button class="inactive dialog__btn"><i class="material-icons fab inactive">add</i></button>
+        <button class="inactive dialog__btn">
+          <a href="{{ URL::to('customers/create')}}"> <i class="material-icons fab inactive">add</i> </a>
+        </button>
         <div class="fab-modal-modal-content">
           <div class="bar">
             <button class="active dialog__btn"><i class="material-icons fab active">cancel</i></button>

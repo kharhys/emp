@@ -14,3 +14,4 @@
 Route::get('/', 'SiteController@index');
 Route::post('/login', 'SiteController@login');
 Route::get('/customers', 'CustomerController@index');
+Route::get('/customers/create', 'CustomerController@create');
