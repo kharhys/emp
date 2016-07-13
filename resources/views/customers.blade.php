@@ -10,7 +10,8 @@
     <div class="page">
       <header class="main-header">
         <div class="wrap">
-          <h1>Material Header</h1>
+          <h1>Logo</h1>
+          <h2>Slogan</h2>
         </div>
       </header>
       <nav role='navigation'>
