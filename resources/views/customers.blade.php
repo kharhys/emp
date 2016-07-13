@@ -3,7 +3,7 @@
   <head>
     <title>Customers</title>
     <link href="fab.css" rel="stylesheet" type="text/css">
-    <link href="landing.css" rel="stylesheet" type="text/css">
+    <link href="bubbles.css" rel="stylesheet" type="text/css">
     <link href="customers.css" rel="stylesheet" type="text/css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
   </head>
@@ -11,16 +11,6 @@
     <div class="page">
       <header class="main-header">
         <div class="wrapper">
-        	<div class="container">
-        		<h1>Logo</h1>
-
-        		<form class="form" action="/login" method="post">
-        			<input name="email" type="text" placeholder="Username">
-        			<input name="password" type="password" placeholder="Password">
-        			<button type="submit" id="login-button">Login</button>
-        		</form>
-        	</div>
-
         	<ul class="bg-bubbles">
         		<li></li>
         		<li></li>
