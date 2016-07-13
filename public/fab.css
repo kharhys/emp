@@ -211,6 +211,7 @@ button.inactive {
 }
 
 .page-header h1 {
+  margin: 0;
   padding: 1rem;
   color: #FFFFFF;
   font-weight: normal;
