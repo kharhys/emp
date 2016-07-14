@@ -45,8 +45,7 @@
         </thead>
         <tbody>
           <?php foreach ($customers as $cust): ?>
-            <?php $num = urldecode('%') . $cust['phone'] . urldecode('%'); print_r($num) ?>
-            <?php $url = urldecode(\URL::to('customers/view', [ 'phone' => $num ])) ?>
+            <?php $url = \URL::to('customers/view', [ 'phone' => '%'.$cust['phone'].'%' ]) ?>
             <tr>
               <td><a href=<?=$url?> class=""> <?=$cust['phone']?> </a></td>
               <td><?=$cust['name']?></td>
