@@ -8,7 +8,7 @@
 <div class="container">
   <header class="page-header">
     <h1> View Customer  </h1>
-    <?php print_r(rawurldecode($customer)); ?>
+    <?php print_r($customer); ?>
   </header>
 
   <div class="fab-modal-backdrop">
