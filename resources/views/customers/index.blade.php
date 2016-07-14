@@ -14,7 +14,7 @@
     <div class="fab-modal-container inactive" id="dialog">
       <div class="fab-modal-inner">
         <button class="inactive dialog__btn">
-          <a href="{{ URL::to('customers/create')}}"> <i class="material-icons fab inactive">add</i> </a>
+          <a href="{{ URL::to('customers/create') }}"> <i class="material-icons fab inactive">add</i> </a>
         </button>
         <div class="fab-modal-modal-content">
           <div class="bar">
@@ -46,7 +46,7 @@
         <tbody>
           <?php foreach ($customers as $cust): ?>
             <tr>
-              <td><a href="{{ URL::to('customers/view', [ 'phone' => <?=$cust['phone']?> ])}}"> <?=$cust['phone']?> </a></td>
+              <td><a href="{{ URL::to('customers/view', [ 'phone' => 'num' ]) }}"> <?=$cust['phone']?> </a></td>
               <td><?=$cust['name']?></td>
               <td><?=$cust['gender']?></td>
               <td><?=$cust['occupation']?></td>
