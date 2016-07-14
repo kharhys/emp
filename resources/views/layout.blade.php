@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="/bubbles.css" type="text/css" />
     <link rel="stylesheet" href="/customers.css" type="text/css" />
     <link rel="stylesheet" href="/formsteps.css" media="screen" title="no title" charset="utf-8" />
+    <link rel="stylesheet" href="/customersview.css" media="screen" title="no title" charset="utf-8" />
     <link rel="stylesheet" href="/customersindex.css" media="screen" title="no title" charset="utf-8" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" type="text/css" />
     <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:400,500,300,700' type='text/css' />
