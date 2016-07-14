@@ -35,22 +35,22 @@
       <table id="example" class="display" cellspacing="0" width="100%">
         <thead>
           <tr>
+            <th>Phone</th>
             <th>Name</th>
             <th>Gender</th>
             <th>Occupation</th>
             <th>Address</th>
-            <th>Phone</th>
             <th>DOB</th>
           </tr>
         </thead>
         <tbody>
           <?php foreach ($customers as $cust): ?>
             <tr>
+              <td><a href="<?= {{ URL::to('customers/view', [ 'phone' => $cust['phone'] ])}} ?>"> <?=$cust['phone']?> </a></td>
               <td><?=$cust['name']?></td>
               <td><?=$cust['gender']?></td>
               <td><?=$cust['occupation']?></td>
               <td><?=$cust['address']?></td>
-              <td><?=$cust['phone']?></td>
               <td><?=$cust['dob']?></td>
             </tr>
           <?php endforeach; ?>

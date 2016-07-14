@@ -41,4 +41,13 @@ class CustomerController extends Controller {
     return view('customers.create');
   }
 
+  public function view($phone) {
+    //ensure auth
+    $token = \Cookie::get('token');
+    if(!$token) { return redirect('/'); }
+
+    $res = [ 'customer' => $phone ];
+    return view('customers.view', $res);
+  }
+
 }
