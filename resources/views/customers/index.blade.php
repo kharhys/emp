@@ -46,7 +46,7 @@
         <tbody>
           <?php foreach ($customers as $cust): ?>
             <tr>
-              <td><a href="<?= {{ URL::to('customers/view', [ 'phone' => $cust['phone'] ])}} ?>"> <?=$cust['phone']?> </a></td>
+              <td><a href="{{ URL::to('customers/view', [ 'phone' => <?=$cust['phone']?> ])}}"> <?=$cust['phone']?> </a></td>
               <td><?=$cust['name']?></td>
               <td><?=$cust['gender']?></td>
               <td><?=$cust['occupation']?></td>
