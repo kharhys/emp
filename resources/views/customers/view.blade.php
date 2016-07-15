@@ -65,7 +65,7 @@
                     <?php foreach ($customer as $key => $val): ?>
                       <ul class="dl-horizontal">
                         <li><?=$key?></li>
-                        <li><?=$cust[$key]?></li>
+                        <li><?=$val?></li>
                       </ul>
                     <?php endforeach; ?>
                   </div>
