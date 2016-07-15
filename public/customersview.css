@@ -223,8 +223,9 @@ body {
 }
 
 .nav .m-dropdown li a {
+  font-size: 1em;
   width: 100%;
-  padding: 1em 18px;
+  padding: 1em 2em;
   display: inline-block;
   white-space: pre;
   box-sizing: border-box;
@@ -259,7 +260,6 @@ body {
   background: linear-gradient(left, #e0e3ea 50%, #e3e6ec 50%);
   background-size: 10px 10px;
   background: #fff;
-  padding: 1rem;
 }
 
 .ns_tab_content .ios-dl .legend {
@@ -276,7 +276,7 @@ body {
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.01), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 1px -1px rgba(0, 0, 0, 0.01)
 }
 .ns_tab_content .ios-dl ul {
-  padding: 1em;
+  padding: 0.4em;
   margin: 0px 5px;
   display: flex;
   list-style-type: none;
@@ -284,12 +284,10 @@ body {
   border-top: 1px solid #e5e5e5;
 }
 .ns_tab_content .ios-dl ul li {
-
   padding: 0.5rem;
-
 }
 .ns_tab_content .ios-dl ul li:last-child {
-  flex: 3;
+  flex: 4;
 }
 .ns_tab_content .ios-dl ul li:first-child {
   text-align: right;
@@ -304,4 +302,7 @@ body {
 }
 .ns_tab_content .ios-dl li:last-child {
   color: #555;
+}
+ul.dl-horizontal:hover {
+    background: #efefef;
 }

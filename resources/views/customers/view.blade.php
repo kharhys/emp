@@ -37,8 +37,8 @@
               <p class="cross">x</p>
               <figure></figure>
               <ul class="m-dropdown">
-                <li><a href="http://www.g.com">Edit</a></li>
-                <li><a href="http://www.g.com">Delete</a></li>
+                <li><a href="#">Edit</a></li>
+                <li><a href="#">Delete</a></li>
               </ul>
             </div>
           </ul>
@@ -61,23 +61,14 @@
               <div class="row-fluid">
 
                 <div class="ios-dl">
-
-                  <span class="legend">Location Info</span>
                   <div class="definition-group">
-                    <ul class="dl-horizontal">
-                      <li>City</li>
-                      <li>San Francisco</li>
-                    </ul>
-                    <ul class="dl-horizontal">
-                      <li>State</li>
-                      <li>Insanity</li>
-                    </ul>
-                    <ul class="dl-horizontal">
-                      <li>Coordinates</li>
-                      <li>37.7865, -122.4557</li>
-                    </ul>
+                    <?php foreach ($customer as $key => $val): ?>
+                      <ul class="dl-horizontal">
+                        <li><?=$key?></li>
+                        <li><?=$cust[$key]?></li>
+                      </ul>
+                    <?php endforeach; ?>
                   </div>
-
                 </div>
 
               </div>

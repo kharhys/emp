@@ -46,7 +46,8 @@ class CustomerController extends Controller {
     $token = \Cookie::get('token');
     if(!$token) { return redirect('/'); }
 
-    $res = [ 'customer' => $phone ];
+    $customer = Customer::where('phone', $phone)->first();
+    $res = [ 'customer' => $customer ];
     return view('customers.view', $res);
   }
 
