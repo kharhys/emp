@@ -37,10 +37,8 @@
               <p class="cross">x</p>
               <figure></figure>
               <ul class="m-dropdown">
-                <li><a href="http://www.g.com">Art</a></li>
-                <li><a href="http://www.g.com">Coding</a></li>
-                <li><a href="http://www.g.com">Design</a></li>
-                <li><a href="http://www.g.com">Web Development</a></li>
+                <li><a href="http://www.g.com">Edit</a></li>
+                <li><a href="http://www.g.com">Delete</a></li>
               </ul>
             </div>
           </ul>
@@ -114,5 +112,15 @@
 
 @section('script')
 <script type="text/javascript">
+var kebab = document.querySelector('.kebab'),
+    middle = document.querySelector('.middle'),
+    cross = document.querySelector('.cross'),
+    dropdown = document.querySelector('.m-dropdown');
+
+    kebab.addEventListener('click', function() {
+      middle.classList.toggle('active');
+      cross.classList.toggle('active');
+      dropdown.classList.toggle('active');
+    })
 </script>
 @endsection
