@@ -57,22 +57,31 @@
 
         <section id="content1">
           <p>
-            <dl>
-              <dt>Name</dt>
-              <dd>Sally Jones</dd>
+            <div class="ns_tab_content">
+              <div class="row-fluid">
 
-              <dt>Occupation</dt>
-              <dd>chef</dd>
+                <div class="ios-dl">
 
-              <dt>Address</dt>
-              <dd>521 First Street, Chicago IL, USA</dd>
+                  <span class="legend">Location Info</span>
+                  <div class="definition-group">
+                    <ul class="dl-horizontal">
+                      <li>City</li>
+                      <li>San Francisco</li>
+                    </ul>
+                    <ul class="dl-horizontal">
+                      <li>State</li>
+                      <li>Insanity</li>
+                    </ul>
+                    <ul class="dl-horizontal">
+                      <li>Coordinates</li>
+                      <li>37.7865, -122.4557</li>
+                    </ul>
+                  </div>
 
-              <dt>This is really long</dt>
-              <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</dd>
+                </div>
 
-              <dt>Definition term</dt>
-              <dd>Definition definition</dd>
-            </dl>
+              </div>
+            </div>
           </p>
         </section>
 
@@ -113,14 +122,14 @@
 @section('script')
 <script type="text/javascript">
 var kebab = document.querySelector('.kebab'),
-    middle = document.querySelector('.middle'),
-    cross = document.querySelector('.cross'),
-    dropdown = document.querySelector('.m-dropdown');
+middle = document.querySelector('.middle'),
+cross = document.querySelector('.cross'),
+dropdown = document.querySelector('.m-dropdown');
 
-    kebab.addEventListener('click', function() {
-      middle.classList.toggle('active');
-      cross.classList.toggle('active');
-      dropdown.classList.toggle('active');
-    })
+kebab.addEventListener('click', function() {
+  middle.classList.toggle('active');
+  cross.classList.toggle('active');
+  dropdown.classList.toggle('active');
+})
 </script>
 @endsection
