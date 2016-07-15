@@ -15,6 +15,7 @@ body {
   margin: 0 auto;
 }
 a {
+  color: #2196F3;
   text-decoration: none;
 }
 .main-header {
@@ -40,14 +41,14 @@ a {
   padding: 0;
 }
 nav {
-  background-color: #303F9F;
+  background: linear-gradient(to bottom right, #50a3a2 0%, #53e3a6 100%);
 }
 nav ul {
   display: flex;
   margin: 0;
   padding-left: 0;
   list-style-type: none;
-  justify-content: center;
+  justify-content: left;
 }
 nav ul li a {
   display: block;
@@ -57,7 +58,7 @@ nav ul li a {
 }
 nav ul li a:hover,
 nav ul li a.active {
-  background-color: #283593;
+  background: linear-gradient(to top right, #00bcd4 0%, #50a3a2 100%);
 }
 main {
   padding: 5px;
