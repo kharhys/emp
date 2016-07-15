@@ -16,7 +16,7 @@
       <div class="fab-modal-container inactive" id="dialog">
         <div class="fab-modal-inner">
           <button class="inactive dialog__btn">
-            <a href="{{ URL::to('customers') }}"> <i class="material-icons fab inactive">close</i> </a>
+            <a href="{{ URL::to('customers') }}"> <i class="material-icons fab inactive">navigate_before</i> </a>
           </button>
         </div>
       </div>
