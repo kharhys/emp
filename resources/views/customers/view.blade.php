@@ -36,10 +36,10 @@
               <figure class="middle"></figure>
               <p class="cross">x</p>
               <figure></figure>
-              <?php $edit_url = \URL::to('customers/edit', [ 'phone' => $customer['phone'] ]) ?>
-              <?php $delete_url = \URL::to('customers/delete', [ 'phone' => $customer['phone'] ]) ?>
+              <?php $edit_url = \URL::to('customers/edit', [ 'phone' => $customer['phone'] ]); ?>
+              <?php $delete_url = \URL::to('customers/delete', [ 'phone' => $customer['phone'] ]); ?>
               <ul class="m-dropdown">
-                <li><a href="#">Edit</a></li>
+                <li><a href=<?=$edit_url?> >Edit</a></li>
                 <li><a href=<?=$delete_url?> >Delete</a></li>
               </ul>
             </div>
