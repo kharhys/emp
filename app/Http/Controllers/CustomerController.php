@@ -15,12 +15,14 @@ class CustomerController extends Controller {
     if(!$token) { return redirect('/'); }
 
     $input = $request->getQueryString();
-    if(!$input) { return view('customers.index'); }
+    $customers = Customer::all()->toArray();
+    if(!$input)
+      return view('customers.index', [ 'customers' => $customers ]);
 
     $phone = explode("=", $input)[1];
     $customer = Customer::where('phone_number', $phone)->first();
-
-    if(!$customer) { return view('customers.add');}
+    if(!$customer)
+      return view('customers.add');
 
     return redirect('customers/view', [ 'phone' => $customer['phone_number'] ]);
 
