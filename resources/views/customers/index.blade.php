@@ -40,9 +40,9 @@
             <th>Last Name</th>
             <th>Nationality</th>
             <th>Address</th>
-            <th>Gender</th>
             <th>DOB</th>
             <th>Tower Name</th>
+            <th>Apartment Number</th>
           </tr>
         </thead>
         <tbody>
@@ -53,10 +53,10 @@
               <td><?=$cust['first_name']?></td>
               <td><?=$cust['last_name']?></td>
               <td><?=$cust['nationality']?></td>
-              <td><?=$cust['address']?></td>
-              <td><?=$cust['gender']?></td>
+              <td><?=$cust['address_one']."  ".$customer['city']?></td>
               <td><?=$cust['date_of_birth']?></td>
               <td><?=$cust['tower_name']?></td>
+              <td><?=$cust['apartment_number']?></td>
             </tr>
           <?php endforeach; ?>
         </tbody>
