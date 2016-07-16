@@ -26,9 +26,9 @@
 
       <div class="page_card_header">
         <div id="customer_details">
-          <h1> <?=$customer['first_name']."  ".$customer['last_name'] ?> </h1>
-          <h2> <?=$customer['mobile_number'] ?>  </h2>
-          <h3> <?=$customer['phone_number'] ?>  </h3>
+          <h1> <?=$personal['first_name']."  ".$personal['last_name'] ?> </h1>
+          <h2> <?=$personal['mobile_number'] ?>  </h2>
+          <h3> <?=$personal['phone_number'] ?>  </h3>
         </div>
         <div>
           <ul class="nav">
@@ -37,8 +37,8 @@
               <figure class="middle"></figure>
               <p class="cross">x</p>
               <figure></figure>
-              <?php $edit_url = \URL::to('customers/edit', [ 'phone' => $customer['phone'] ]); ?>
-              <?php $delete_url = \URL::to('customers/delete', [ 'phone' => $customer['phone'] ]); ?>
+              <?php $edit_url = \URL::to('customers/edit', [ 'phone' => $personal['phone'] ]); ?>
+              <?php $delete_url = \URL::to('customers/delete', [ 'phone' => $personal['phone'] ]); ?>
               <ul class="m-dropdown">
                 <li><a href=<?=$edit_url?> >Edit</a></li>
                 <li><a href=<?=$delete_url?> >Delete</a></li>
@@ -65,7 +65,7 @@
 
                 <div class="ios-dl">
                   <div class="definition-group">
-                    <?php foreach ($customer as $key => $val): ?>
+                    <?php foreach ($personal as $key => $val): ?>
                       <ul class="dl-horizontal">
                         <li><?=$key?></li>
                         <li><?=$val?></li>
@@ -81,28 +81,43 @@
 
         <section id="content2">
           <p>
-            Bacon ipsum dolor sit amet landjaeger sausage brisket, jerky drumstick fatback boudin ball tip turducken. Pork belly meatball t-bone bresaola tail filet mignon kevin turkey ribeye shank flank doner cow kielbasa shankle. Pig swine chicken hamburger, tenderloin turkey rump ball tip sirloin frankfurter meatloaf boudin brisket ham hock. Hamburger venison brisket tri-tip andouille pork belly ball tip short ribs biltong meatball chuck. Pork chop ribeye tail short ribs, beef hamburger meatball kielbasa rump corned beef porchetta landjaeger flank. Doner rump frankfurter meatball meatloaf, cow kevin pork pork loin venison fatback spare ribs salami beef ribs.
-          </p>
-          <p>
-            Jerky jowl pork chop tongue, kielbasa shank venison. Capicola shank pig ribeye leberkas filet mignon brisket beef kevin tenderloin porchetta. Capicola fatback venison shank kielbasa, drumstick ribeye landjaeger beef kevin tail meatball pastrami prosciutto pancetta. Tail kevin spare ribs ground round ham ham hock brisket shoulder. Corned beef tri-tip leberkas flank sausage ham hock filet mignon beef ribs pancetta turkey.
+            <div class="ns_tab_content">
+              <div class="row-fluid">
+
+                <div class="ios-dl">
+                  <div class="definition-group">
+                    <?php foreach ($property as $key => $val): ?>
+                      <ul class="dl-horizontal">
+                        <li><?=$key?></li>
+                        <li><?=$val?></li>
+                      </ul>
+                    <?php endforeach; ?>
+                  </div>
+                </div>
+
+              </div>
+            </div>
           </p>
         </section>
 
         <section id="content3">
           <p>
-            Bacon ipsum dolor sit amet beef venison beef ribs kielbasa. Sausage pig leberkas, t-bone sirloin shoulder bresaola. Frankfurter rump porchetta ham. Pork belly prosciutto brisket meatloaf short ribs.
-          </p>
-          <p>
-            Brisket meatball turkey short loin boudin leberkas meatloaf chuck andouille pork loin pastrami spare ribs pancetta rump. Frankfurter corned beef beef tenderloin short loin meatloaf swine ground round venison.
-          </p>
-        </section>
+            <div class="ns_tab_content">
+              <div class="row-fluid">
 
-        <section id="content4">
-          <p>
-            Bacon ipsum dolor sit amet landjaeger sausage brisket, jerky drumstick fatback boudin ball tip turducken. Pork belly meatball t-bone bresaola tail filet mignon kevin turkey ribeye shank flank doner cow kielbasa shankle. Pig swine chicken hamburger, tenderloin turkey rump ball tip sirloin frankfurter meatloaf boudin brisket ham hock. Hamburger venison brisket tri-tip andouille pork belly ball tip short ribs biltong meatball chuck. Pork chop ribeye tail short ribs, beef hamburger meatball kielbasa rump corned beef porchetta landjaeger flank. Doner rump frankfurter meatball meatloaf, cow kevin pork pork loin venison fatback spare ribs salami beef ribs.
-          </p>
-          <p>
-            Jerky jowl pork chop tongue, kielbasa shank venison. Capicola shank pig ribeye leberkas filet mignon brisket beef kevin tenderloin porchetta. Capicola fatback venison shank kielbasa, drumstick ribeye landjaeger beef kevin tail meatball pastrami prosciutto pancetta. Tail kevin spare ribs ground round ham ham hock brisket shoulder. Corned beef tri-tip leberkas flank sausage ham hock filet mignon beef ribs pancetta turkey.
+                <div class="ios-dl">
+                  <div class="definition-group">
+                    <?php foreach ($attachment as $key => $val): ?>
+                      <ul class="dl-horizontal">
+                        <li><?=$key?></li>
+                        <li><?=$val?></li>
+                      </ul>
+                    <?php endforeach; ?>
+                  </div>
+                </div>
+
+              </div>
+            </div>
           </p>
         </section>
 
