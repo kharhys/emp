@@ -13,7 +13,7 @@
 
 Route::get('/', 'SiteController@index');
 Route::post('/login', 'SiteController@login');
-Route::get('/customers', 'CustomerController@index');
+Route::get('/customers/{name?}', 'CustomerController@index');
 Route::get('/customers/add', 'CustomerController@add');
 Route::post('/customers/create', 'CustomerController@create');
 Route::post('/customers/update', 'CustomerController@update');
