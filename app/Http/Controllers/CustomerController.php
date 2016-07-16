@@ -50,7 +50,7 @@ class CustomerController extends Controller {
       'name', 'first_name', 'last_name',
       'dob', 'gender', 'date_of_birth',
       'phone', 'mobile_number', 'phone_number',
-      'address', 'occupation',  
+      'address', 'occupation',
       'nationality', 'passport_number', 'emirates_id'
     ];
     $customer = Customer::where('phone', $phone)
@@ -66,6 +66,16 @@ class CustomerController extends Controller {
       */
     $res = [ 'customer' => $customer ];
     return view('customers.view', $res);
+  }
+
+  public function delete($phone) {
+    //ensure auth
+    $token = \Cookie::get('token');
+    if(!$token) { return redirect('/'); }
+
+    $customer = Customer::where('phone', $phone)->delete();
+    $res = [ 'customer' => $customer ];
+    return redirect('/customers');
   }
 
 }

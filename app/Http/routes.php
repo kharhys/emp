@@ -16,3 +16,4 @@ Route::post('/login', 'SiteController@login');
 Route::get('/customers', 'CustomerController@index');
 Route::get('/customers/create', 'CustomerController@create');
 Route::get('/customers/view/{phone}', 'CustomerController@view');
+Route::get('/customers/delete/{phone}', 'CustomerController@delete');
