@@ -63,6 +63,9 @@ class CustomerController extends Controller {
     $token = \Cookie::get('token');
     if(!$token) { return redirect('/'); }
 
+    if ( !Customer::where('phone_number', $phone)->exists() )
+      return redirect('/customers')->with('notification', 'Customer not found);
+
     $_pers = [
       'first_name', 'last_name', 'date_of_birth',
       'mobile_number', 'phone_number', 'address_one',
