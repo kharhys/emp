@@ -78,4 +78,17 @@ class CustomerController extends Controller {
     return redirect('/customers');
   }
 
+  public function edit($phone) {
+    //ensure auth
+    $token = \Cookie::get('token');
+    if(!$token) { return redirect('/'); }
+
+    $customer = Customer::where('phone', $phone)
+      -->first()
+      ->toArray();
+
+    $res = [ 'customer' => $customer ];
+    return redirect('/customers');
+  }
+
 }
