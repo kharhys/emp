@@ -33,12 +33,47 @@ class CustomerController extends Controller {
     return view('customers.index', $res);
   }
 
+  public function add(Request $request) {
+    //ensure auth
+    $token = \Cookie::get('token');
+    if(!$token) { return redirect('/'); }
+
+    return view('customers.add');
+  }
+
   public function create(Request $request) {
     //ensure auth
     $token = \Cookie::get('token');
     if(!$token) { return redirect('/'); }
 
-    return view('customers.create');
+    $customer = new Customer;
+    $customer->dob = $request->get('dob');
+    $customer->name = $request->get('name');
+    $customer->phone = $request->get('phone');
+    $customer->gender = $request->get('gender');
+    $customer->address = $request->get('address');
+    $customer->occupation = $request->get('occupation');
+    $customer->save();
+
+    return redirect('/customers');
+  }
+
+  public function update(Request $request) {
+    //ensure auth
+    $token = \Cookie::get('token');
+    if(!$token) { return redirect('/'); }
+
+    $phone = $request->get('old_phone');
+    $customer = Customer::where('phone', $phone)->first();
+    $customer->dob = $request->get('dob');
+    $customer->name = $request->get('name');
+    $customer->phone = $request->get('phone');
+    $customer->gender = $request->get('gender');
+    $customer->address = $request->get('address');
+    $customer->occupation = $request->get('occupation');
+    $customer->save();
+
+    return redirect('/customers');
   }
 
   public function view($phone) {
@@ -88,7 +123,7 @@ class CustomerController extends Controller {
       ->toArray();
 
     $res = [ 'customer' => $customer ];
-    return redirect('/customers');
+    return view('customers.edit', $res);
   }
 
 }

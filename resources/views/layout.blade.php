@@ -37,7 +37,7 @@
       <nav role='navigation'>
         <div class="wrap">
           <ul>
-            <li><a class="active" href="#">Customers</a></li>
+            <li><a class="active" href="{{ URL::to('customers') }}">Customers</a></li>
             <li><a href="#">Users</a></li>
             <li><a href="#">Account</a></li>
             <li><a href="#">Settings</a></li>
@@ -46,6 +46,11 @@
       </nav>
       <main>
         <div class="wrap">
+          <article class="session_messages">
+            @if($errors->any())
+              <h4>{{$errors->first()}}</h4>
+            @endif
+          </article>
           <article>
             @yield('page')
           </article>

@@ -18,7 +18,7 @@
         <div class="fab-modal-modal-content">
           <div class="bar">
             <button class="active dialog__btn"><i class="material-icons fab active">cancel</i></button>
-            <h2 class="mdl-card__title-text">Create new customer</h2>
+            <h2 class="mdl-card__title-text">Update customer</h2>
           </div>
           <div class="content">
             <div class="form-container" >
@@ -30,17 +30,18 @@
   </div>
 
   <div class="main">
-    <form class = "steps-form">
+    <form class = "steps-form" method="post" action="{{ URL::to('customers/update') }}" >
+      <input type="hidden" value="<?customer['old_phone']?>" name="old_phone" />
       <div class = "step-form" data-next = ".step-form.step-two">
         <h2>Customer Details</h2>
-        <input type="text" name="first_name" placeholder = "First Name" class = "form-input">
-        <input type="text" name="last_name" placeholder = "Last Name" class = "form-input">
-        <input type="text" name="date_of_birth" placeholder = "Date Of Birth Name" class = "form-input">
-        <input type="text" name="phone_number" placeholder = "Phone Number" class = "form-input">
-        <input type="text" name="mobile_number" placeholder = "Mobile Number" class = "form-input">
-        <input type="text" name="nationality" placeholder = "Nationality" class = "form-input">
-        <input type="text" name="passport_number" placeholder = "Passport Number" class = "form-input">
-        <input type="text" name="emirates_id" placeholder = "Emirates ID" class = "form-input">
+        <input type="text" value="<?customer['first_name']?>" name="first_name" placeholder = "First Name" class = "form-input">
+        <input type="text" value="<?customer['last_name']?>" name="last_name" placeholder = "Last Name" class = "form-input">
+        <input type="text" value="<?customer['date_of_birth']?>" name="date_of_birth" placeholder = "Date Of Birth Name" class = "form-input">
+        <input type="text" value="<?customer['phone_number']?>" name="phone_number" placeholder = "Phone Number" class = "form-input">
+        <input type="text" value="<?customer['mobile_number']?>" name="mobile_number" placeholder = "Mobile Number" class = "form-input">
+        <input type="text" value="<?customer['nationality']?>" name="nationality" placeholder = "Nationality" class = "form-input">
+        <input type="text" value="<?customer['passport_number']?>" name="passport_number" placeholder = "Passport Number" class = "form-input">
+        <input type="text" value="<?customer['emirates_id']?>" name="emirates_id" placeholder = "Emirates ID" class = "form-input">
         <button class = "form-input btn next-step" type = "button">Next</button>
       </div>
       <div class = "step-form step-two" data-next = ".step-form.step-three">
