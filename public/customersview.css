@@ -9,6 +9,13 @@ html, body {
   height: 100%;
 }
 
+.notification {
+  padding: 1rem;
+  margin: 5px 0;
+  color: #fff;
+  background: #ff4081;
+}
+
 body {
   font: 14px/1 'Open Sans', sans-serif;
   color: #555;
