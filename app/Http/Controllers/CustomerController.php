@@ -17,8 +17,8 @@ class CustomerController extends Controller {
     $input = $request->getQueryString();
     if($input) {
       $phone = explode("=", $input)[1];
-      $customer = Customer::where('phone', $phone)->first();
-      $customers = Customer::where('phone', '<>', $phone)->get()->toArray();
+      $customer = Customer::where('phone_number', $phone)->first();
+      $customers = Customer::where('phone_number', '<>', $phone)->get()->toArray();
     } else {
       $customer = null;
       $customers = Customer::all()->toArray();
@@ -57,7 +57,7 @@ class CustomerController extends Controller {
     if(!$token) { return redirect('/'); }
 
     $phone = $request->get('old_phone');
-    $customer = Customer::where('phone', $phone)->first();
+    $customer = Customer::where('phone_number', $phone)->first();
     $this->store($customer, $request);
 
     return redirect('/customers');
@@ -75,14 +75,14 @@ class CustomerController extends Controller {
       'address', 'occupation',
       'nationality', 'passport_number', 'emirates_id'
     ];
-    $customer = Customer::where('phone', $phone)
+    $customer = Customer::where('phone_number', $phone)
       ->first($personal)
       ->toArray();
       /*
-    $customer = Customer::where('phone', $phone)
+    $customer = Customer::where('phone_number', $phone)
       ->first(['name', 'gender', 'dob', 'phone', 'address', 'occupation'])
       ->toArray();
-    $customer = Customer::where('phone', $phone)
+    $customer = Customer::where('phone_number', $phone)
       ->first(['name', 'gender', 'dob', 'phone', 'address', 'occupation'])
       ->toArray();
       */
@@ -95,7 +95,7 @@ class CustomerController extends Controller {
     $token = \Cookie::get('token');
     if(!$token) { return redirect('/'); }
 
-    $customer = Customer::where('phone', $phone)->delete();
+    $customer = Customer::where('phone_number', $phone)->delete();
     $res = [ 'customer' => $customer ];
     return redirect('/customers');
   }
@@ -105,7 +105,7 @@ class CustomerController extends Controller {
     $token = \Cookie::get('token');
     if(!$token) { return redirect('/'); }
 
-    $customer = Customer::where('phone', $phone)
+    $customer = Customer::where('phone_number', $phone)
       ->first()
       ->toArray();
 

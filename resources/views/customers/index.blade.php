@@ -47,7 +47,7 @@
         </thead>
         <tbody>
           <?php foreach ($customers as $cust): ?>
-            <?php $url = \URL::to('customers/view', [ 'phone' => $cust['phone'] ]) ?>
+            <?php $url = \URL::to('customers/view', [ 'phone' => $cust['phone_number'] ]) ?>
             <tr>
               <td><a href=<?=$url?> class=""> <?=$cust['phone_number']?> </a></td>
               <td><?=$cust['first_name']?></td>
