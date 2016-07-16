@@ -53,7 +53,7 @@
               <td><?=$cust['first_name']?></td>
               <td><?=$cust['last_name']?></td>
               <td><?=$cust['nationality']?></td>
-              <td><?=$cust['address_one']."  ".$customer['city']?></td>
+              <td><?=$cust['address_one']."  ".$cust['city']?></td>
               <td><?=$cust['date_of_birth']?></td>
               <td><?=$cust['tower_name']?></td>
               <td><?=$cust['apartment_number']?></td>
