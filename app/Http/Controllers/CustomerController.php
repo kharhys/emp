@@ -64,7 +64,7 @@ class CustomerController extends Controller {
     if(!$token) { return redirect('/'); }
 
     if ( !Customer::where('phone_number', $phone)->exists() )
-      return redirect('/customers')->with('notification', 'Customer not found);
+      return redirect('/customers')->with('notification', 'Customer not found');
 
     $_pers = [
       'first_name', 'last_name', 'date_of_birth',
