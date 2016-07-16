@@ -68,25 +68,27 @@ class CustomerController extends Controller {
     $token = \Cookie::get('token');
     if(!$token) { return redirect('/'); }
 
-    $personal = [
-      'name', 'first_name', 'last_name',
-      'dob', 'gender', 'date_of_birth',
-      'phone', 'mobile_number', 'phone_number',
-      'address', 'occupation',
+    $_pers = [
+      'first_name', 'last_name', 'date_of_birth',
+      'mobile_number', 'phone_number', 'address_one',
       'nationality', 'passport_number', 'emirates_id'
     ];
-    $customer = Customer::where('phone_number', $phone)
-      ->first($personal)
-      ->toArray();
-      /*
-    $customer = Customer::where('phone_number', $phone)
-      ->first(['name', 'gender', 'dob', 'phone', 'address', 'occupation'])
-      ->toArray();
-    $customer = Customer::where('phone_number', $phone)
-      ->first(['name', 'gender', 'dob', 'phone', 'address', 'occupation'])
-      ->toArray();
-      */
-    $res = [ 'customer' => $customer ];
+    $_prop = [
+      'tower_name', 'apartment_number', 'area_sq_ft',
+      'contract_date', 'address_one', 'address_two',
+      'city', 'postal_address', 'email_address'
+    ];
+    $_att = [ 'passport_attachment', 'contract_attachment' ];
+
+    $personal = Customer::where('phone_number', $phone)->first($_pers)->toArray();
+    $property = Customer::where('phone_number', $phone)->first($_prop)->toArray();
+    $attachment = Customer::where('phone_number', $phone)->first($_att)->toArray();
+
+    $res = [
+      'personal' => $personal,
+      'property' => $property,
+      'attachment' => $attachment,
+    ];
     return view('customers.view', $res);
   }
 
