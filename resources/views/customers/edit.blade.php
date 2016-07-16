@@ -33,7 +33,7 @@
     <div class="main">
       <form class = "steps-form" method="post" action="{{ URL::to('customers/update') }}" >
         <input type="hidden" value="<?customer['phone_number']?>" name="old_phone" />
-        <div class = "step-form" data-next = ".step-form.step-two">
+        <div class = "step-form active" data-next = ".step-form.step-two">
           <h2>Customer Details</h2>
           <input type="text" value="<?=$customer['first_name']?>" name="first_name" placeholder = "First Name" class = "form-input">
           <input type="text" value="<?=$customer['last_name']?>" name="last_name" placeholder = "Last Name" class = "form-input">
@@ -47,15 +47,15 @@
         </div>
         <div class = "step-form step-two" data-next = ".step-form.step-three">
           <h2>Property Details</h2>
-          <input type="text" name="<?=$customer['tower_name']?>" placeholder = "Tower Name" class = "form-input">
-          <input type="text" name="<?=$customer['apartment_number']?>" placeholder = "Apartment Number" class = "form-input">
-          <input type="text" name="<?=$customer['area_sq_ft']?>" placeholder = "Area In Sq. Ft." class = "form-input">
-          <input type="text" name="<?=$customer['contract_date']?>" placeholder = "Contract Date" class = "form-input">
-          <input type="text" name="<?=$customer['address_one']?>" placeholder = "Address 1" class = "form-input">
-          <input type="text" name="<?=$customer['address_two']?>" placeholder = "Address 2" class = "form-input">
-          <input type="text" name="<?=$customer['city']?>" placeholder = "City" class = "form-input">
-          <input type="text" name="<?=$customer['postal_address']?>" placeholder = "P.O. Box" class = "form-input">
-          <input type="text" name="<?=$customer['email_address']?>" placeholder = "Email Address" class = "form-input">
+          <input type="text" name="tower_name" value="<?=$customer['tower_name']?>" placeholder = "Tower Name" class = "form-input">
+          <input type="text" name="apartment_number" value="<?=$customer['apartment_number']?>" placeholder = "Apartment Number" class = "form-input">
+          <input type="text" name="area_sq_ft" value="<?=$customer['area_sq_ft']?>" placeholder = "Area In Sq. Ft." class = "form-input">
+          <input type="text" name="contract_date" value="<?=$customer['contract_date']?>" placeholder = "Contract Date" class = "form-input">
+          <input type="text" name="address_one" value="<?=$customer['address_one']?>" placeholder = "Address 1" class = "form-input">
+          <input type="text" name="address_two" value="<?=$customer['address_two']?>" placeholder = "Address 2" class = "form-input">
+          <input type="text" name="city" value="<?=$customer['city']?>" placeholder = "City" class = "form-input">
+          <input type="text" name="postal_address" value="<?=$customer['postal_address']?>" placeholder = "P.O. Box" class = "form-input">
+          <input type="text" name="email_address" value="<?=$customer['email_address']?>" placeholder = "Email Address" class = "form-input">
           <button class = "form-input btn next-step" type = "button">Next</button>
         </div>
         <div class = "step-form step-three">
