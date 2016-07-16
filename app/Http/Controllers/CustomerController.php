@@ -46,7 +46,24 @@ class CustomerController extends Controller {
     $token = \Cookie::get('token');
     if(!$token) { return redirect('/'); }
 
-    $customer = Customer::where('phone', $phone)->first()->toArray();
+    $personal = [
+      'name', 'first_name', 'last_name',
+      'dob', 'gender', 'date_of_birth',
+      'phone', 'mobile_number', 'phone_number',
+      'address', 'occupation',  
+      'nationality', 'passport_number', 'emirates_id'
+    ];
+    $customer = Customer::where('phone', $phone)
+      ->first($personal)
+      ->toArray();
+      /*
+    $customer = Customer::where('phone', $phone)
+      ->first(['name', 'gender', 'dob', 'phone', 'address', 'occupation'])
+      ->toArray();
+    $customer = Customer::where('phone', $phone)
+      ->first(['name', 'gender', 'dob', 'phone', 'address', 'occupation'])
+      ->toArray();
+      */
     $res = [ 'customer' => $customer ];
     return view('customers.view', $res);
   }
