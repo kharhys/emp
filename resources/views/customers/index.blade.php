@@ -14,7 +14,7 @@
     <div class="fab-modal-container inactive" id="dialog">
       <div class="fab-modal-inner">
         <button class="inactive dialog__btn">
-          <a href="{{ URL::to('customers/create') }}"> <i class="material-icons fab inactive">add</i> </a>
+          <a href="{{ URL::to('customers/add') }}"> <i class="material-icons fab inactive">add</i> </a>
         </button>
         <div class="fab-modal-modal-content">
           <div class="bar">

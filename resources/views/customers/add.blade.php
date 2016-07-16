@@ -29,7 +29,7 @@
     </div>
   </div>
 
-  <div class="table__card">
+  <div class="form__card">
     <div class="main">
       <form class = "steps-form" method="post" action="{{ URL::to('customers/create') }}" >
         <div class = "step-form" data-next = ".step-form.step-two">

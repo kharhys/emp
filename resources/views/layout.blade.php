@@ -46,11 +46,11 @@
       </nav>
       <main>
         <div class="wrap">
-          <article class="session_messages">
-            @if($errors->any())
+          @if($errors->any())
+            <article class="session_messages">
               <h4>{{$errors->first()}}</h4>
-            @endif
-          </article>
+            </article>
+          @endif
           <article>
             @yield('page')
           </article>
