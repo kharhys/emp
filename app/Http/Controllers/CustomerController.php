@@ -24,7 +24,7 @@ class CustomerController extends Controller {
     if(!$customer)
       return view('customers.add');
 
-    return redirect('customers/view/', [ 'phone' => $customer['phone_number'] ]);
+    return redirect("/customers/view/".$phone);
 
   }
 
