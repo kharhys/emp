@@ -28,7 +28,6 @@
         <div id="customer_details">
           <h1> <?=$personal['first_name']."  ".$personal['last_name'] ?> </h1>
           <h2> <?=$personal['mobile_number'] ?>  </h2>
-          <h3> <?=$personal['phone_number'] ?>  </h3>
         </div>
         <div>
           <ul class="nav">
