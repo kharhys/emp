@@ -138,8 +138,8 @@ class CustomerController extends Controller {
     $customer->postal_address = $request->get('postal_address');
     $customer->passport_number = $request->get('passport_number');
     $customer->apartment_number = $request->get('apartment_number');
-    $customer->passport_attachment = $request->get('passport_attachment');
-    $customer->contract_attachment = $request->get('contract_attachment');
+    //$customer->passport_attachment = $request->get('passport_attachment');
+    //$customer->contract_attachment = $request->get('contract_attachment');
 
     $customer->save();
   }
