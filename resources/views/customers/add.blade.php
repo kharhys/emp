@@ -7,7 +7,7 @@
 @section('page')
 <div class="container">
   <header class="page-header">
-    <h1> Add Customers  </h1>
+    <h1> Add Customer  </h1>
   </header>
 
   <div class="fab-modal-backdrop">
