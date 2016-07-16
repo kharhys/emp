@@ -14,7 +14,10 @@
     <div class="fab-modal-shadow-surogate"></div>
     <div class="fab-modal-container inactive" id="dialog">
       <div class="fab-modal-inner">
-        <button class="inactive dialog__btn"><i class="material-icons fab inactive">add</i></button>
+        <button class="inactive dialog__btn">
+          <?php $view_url = \URL::to('customers/view', [ 'phone' => $customer['phone_number'] ]); ?>
+          <a href=<?=$view_url?> ><i class="material-icons fab inactive">keyboard_arrow_left</i></a>
+        </button>
         <div class="fab-modal-modal-content">
           <div class="bar">
             <button class="active dialog__btn"><i class="material-icons fab active">cancel</i></button>
