@@ -26,8 +26,9 @@
 
       <div class="page_card_header">
         <div id="customer_details">
-          <h1> Customer Name </h1>
-          <h2> Phone Number </h2>
+          <h1> <?=$customer['first_name']."  ".$customer['last_name'] ?> </h1>
+          <h2> <?=$customer['mobile_number'] ?>  </h2>
+          <h3> <?=$customer['phone_number'] ?>  </h3>
         </div>
         <div>
           <ul class="nav">
