@@ -40,7 +40,7 @@
               <?php $delete_url = \URL::to('customers/delete', [ 'phone' => $customer['phone'] ]) ?>
               <ul class="m-dropdown">
                 <li><a href="#">Edit</a></li>
-                <li><a href=<?=$delete_url ?>Delete</a></li>
+                <li><a href=<?=$delete_url?> >Delete</a></li>
               </ul>
             </div>
           </ul>
