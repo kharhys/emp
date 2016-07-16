@@ -84,7 +84,7 @@ class CustomerController extends Controller {
     if(!$token) { return redirect('/'); }
 
     $customer = Customer::where('phone', $phone)
-      -->first()
+      ->first()
       ->toArray();
 
     $res = [ 'customer' => $customer ];
