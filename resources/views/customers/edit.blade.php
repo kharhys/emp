@@ -35,7 +35,7 @@
   <div class="table__card">
     <div class="main">
       <form class = "steps-form" method="post" action="{{ URL::to('customers/update') }}" >
-        <input type="hidden" value="<?customer['phone_number']?>" name="old_phone" />
+        <input type="hidden" value="<?=$customer['phone_number']?>" name="old_phone" />
         <div class = "step-form active" data-next = ".step-form.step-two">
           <h2>Customer Details</h2>
           <input type="text" value="<?=$customer['first_name']?>" name="first_name" placeholder = "First Name" class = "form-input">
