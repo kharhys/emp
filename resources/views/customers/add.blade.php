@@ -100,7 +100,7 @@
           console.log('handle tower selection', towerId)
           var opts = apartment_number_options.clone()
           .filter(function(){ return this.dataset.towerId = towerId; })
-          $('#apartment_number_options').html(opts)
+          $('#apartment_number').html(opts)
         })
 
         console.log('setting up form step handles')
