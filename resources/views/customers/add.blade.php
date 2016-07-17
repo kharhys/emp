@@ -40,8 +40,9 @@
           <input type="text" name="phone_number" placeholder = "Phone Number" class = "form-input">
           <input type="text" name="mobile_number" placeholder = "Mobile Number" class = "form-input">
           <select name="nationality" class = "form-input">
-            <?php foreach ($countries as $key => $value): ?>
-              <option value="<?=$key?>"> <?=$value?> </option>
+            <option value=""> Nationality </option>
+            <?php foreach ($countries as $country): ?>
+              <option value="<?=$country['id']?>"> <?=$country['nationality']?> </option>
             <?php endforeach; ?>
           </select>
           <input type="text" name="passport_number" placeholder = "Passport Number" class = "form-input">
@@ -50,8 +51,18 @@
         </div>
         <div class = "step-form step-two" data-next = ".step-form.step-three">
           <h2>Property Details</h2>
-          <input type="text" name="tower_name" placeholder = "Tower Name" class = "form-input">
-          <input type="text" name="apartment_number" placeholder = "Apartment Number" class = "form-input">
+          <select name="tower_name" class = "form-input">
+            <option value=""> Toer Name </option>
+            <?php foreach ($countries as $country): ?>
+              <option value="<?=$country['id']?>"> <?=$country['nationality']?> </option>
+            <?php endforeach; ?>
+          </select>
+          <select name="apartment_number"class = "form-input">
+            <option value=""> Apartment Number </option>
+            <?php foreach ($countries as $country): ?>
+              <option value="<?=$country['id']?>"> <?=$country['nationality']?> </option>
+            <?php endforeach; ?>
+          </select>
           <input type="text" name="area_sq_ft" placeholder = "Area In Sq. Ft." class = "form-input">
           <input type="text" name="contract_date" placeholder = "Contract Date" class = "form-input">
           <input type="text" name="address_one" placeholder = "Address 1" class = "form-input">
