@@ -99,7 +99,7 @@
           var towerId = $(this).val();
           console.log('handle tower selection', towerId)
           var opts = apartment_number_options.clone()
-          .filter(function(opt){ console.log(opt.dataset.towerId); return opt.dataset.towerId = towerId; })
+          .filter(function(){ console.log(this.dataset); return this.dataset.towerId = towerId; })
           $('#apartment_number').html(opts)
         })
 
