@@ -60,7 +60,7 @@
           <select name="apartment_number"class = "form-input">
             <option value=""> Apartment Number </option>
             <?php foreach ($apartments as $apartment): ?>
-              <option value="<?=$apartment['id']?>"> <?=$apartment['name']?> </option>
+              <option value="<?=$apartment['id']?>" data-tower-id="<?=$apartment['tower_id']?>" > <?=$apartment['name']?> </option>
             <?php endforeach; ?>
           </select>
           <input type="text" name="area_sq_ft" placeholder = "Area In Sq. Ft." class = "form-input">
@@ -92,6 +92,18 @@
     'use strict';
     (function ($) {
       $(document).on('ready', function () {
+        console.log('setting up option filters')
+        var apartment_number_options = $('#apartment_number option').clone()
+        console.log('setting up option filters handles')
+        $('#tower_name').on('change', function() {
+          var towerId = $(this).val();
+          console.log('handle tower selection', towerId)
+          var opts = apartment_number_options.clone()
+          .filter(function(){ return this.dataset.towerId = towerId; })
+          $('#apartment_number_options').html(opts)
+        })
+
+        console.log('setting up form step handles')
         $('.next-step').on('click', function (evt) {
           evt.preventDefault();
           var $this = $(evt.currentTarget);
@@ -104,6 +116,7 @@
             $target.addClass('active').css({ left: 0 });
           }
         });
+
       });
       var $form = $('.steps-form');
       $('.step-form').each(function (index) {
