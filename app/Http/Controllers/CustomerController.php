@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Tower;
 use App\Customer;
+use App\Apartment;
 use App\Nationality;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -34,8 +36,12 @@ class CustomerController extends Controller {
     $token = \Cookie::get('token');
     if(!$token) { return redirect('/'); }
 
-    $countries = Nationality::all();
-    return view('customers.add', [ 'countries' => $countries ]);
+    $res = [
+      'towers' => Tower::all(),
+      'apartments' => Apartment::all(),
+      'countries' => Nationality::all(),
+    ];
+    return view('customers.add', $res);
   }
 
   public function create(Request $request) {

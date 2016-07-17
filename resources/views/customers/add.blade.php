@@ -52,15 +52,15 @@
         <div class = "step-form step-two" data-next = ".step-form.step-three">
           <h2>Property Details</h2>
           <select name="tower_name" class = "form-input">
-            <option value=""> Toer Name </option>
-            <?php foreach ($countries as $country): ?>
-              <option value="<?=$country['id']?>"> <?=$country['nationality']?> </option>
+            <option value=""> Tower Name </option>
+            <?php foreach ($towers as $tower): ?>
+              <option value="<?=$tower['id']?>"> <?=$tower['name']?> </option>
             <?php endforeach; ?>
           </select>
           <select name="apartment_number"class = "form-input">
             <option value=""> Apartment Number </option>
-            <?php foreach ($countries as $country): ?>
-              <option value="<?=$country['id']?>"> <?=$country['nationality']?> </option>
+            <?php foreach ($apartments as $apartment): ?>
+              <option value="<?=$apartment['id']?>"> <?=$apartment['name']?> </option>
             <?php endforeach; ?>
           </select>
           <input type="text" name="area_sq_ft" placeholder = "Area In Sq. Ft." class = "form-input">
