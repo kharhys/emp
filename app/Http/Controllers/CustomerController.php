@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Customer;
+use App\Nationality;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -33,7 +34,7 @@ class CustomerController extends Controller {
     $token = \Cookie::get('token');
     if(!$token) { return redirect('/'); }
 
-    $countries = \Nationality::all()->toArray();
+    $countries = Nationality::all()->toArray();
     return view('customers.add', [ 'countries' => $countries ]);
   }
 
