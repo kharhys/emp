@@ -39,7 +39,12 @@
           <input type="text" name="date_of_birth" placeholder = "Date Of Birth Name" class = "form-input">
           <input type="text" name="phone_number" placeholder = "Phone Number" class = "form-input">
           <input type="text" name="mobile_number" placeholder = "Mobile Number" class = "form-input">
-          <input type="text" name="nationality" placeholder = "Nationality" class = "form-input">
+          <select name="nationality" class = "form-input">
+            <?php $countries = \Nationality::all()->toArray(); ?>
+            <?php foreach ($countries as $key => $value): ?>
+              <option value="<?=$key?>"> <?=$value?> </option>
+            <?php endforeach; ?>
+          </select>
           <input type="text" name="passport_number" placeholder = "Passport Number" class = "form-input">
           <input type="text" name="emirates_id" placeholder = "Emirates ID" class = "form-input">
           <button class = "form-input btn next-step" type = "button">Next</button>
