@@ -34,7 +34,7 @@ class CustomerController extends Controller {
     $token = \Cookie::get('token');
     if(!$token) { return redirect('/'); }
 
-    $countries = Nationality::all()->toArray();
+    $countries = Nationality::all();
     return view('customers.add', [ 'countries' => $countries ]);
   }
 
