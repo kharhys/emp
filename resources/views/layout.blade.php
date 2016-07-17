@@ -42,6 +42,9 @@
             <li><a href="#">Account</a></li>
             <li><a href="#">Settings</a></li>
           </ul>
+          <ul>
+            <li><a href="{{ URL::to('login') }}">Logout</a></li>
+          </ul>
         </div>
       </nav>
       <main>

@@ -18,6 +18,15 @@ body {
 }
 .wrap {
   margin: 0 auto;
+  display: flex;
+}
+.wrap ul:first-child {
+  flex: 4;
+}
+
+.wrap ul:last-child {
+  flex: 1;
+  justify-content: flex-end;
 }
 a {
   color: #2196F3;
