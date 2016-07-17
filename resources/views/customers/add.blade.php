@@ -40,7 +40,6 @@
           <input type="text" name="phone_number" placeholder = "Phone Number" class = "form-input">
           <input type="text" name="mobile_number" placeholder = "Mobile Number" class = "form-input">
           <select name="nationality" class = "form-input">
-            <?php $countries = \Nationality::all()->toArray(); ?>
             <?php foreach ($countries as $key => $value): ?>
               <option value="<?=$key?>"> <?=$value?> </option>
             <?php endforeach; ?>
