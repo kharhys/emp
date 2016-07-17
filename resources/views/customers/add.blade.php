@@ -39,7 +39,7 @@
           <input type="text" name="date_of_birth" placeholder = "Date Of Birth Name" class = "form-input">
           <input type="text" name="phone_number" placeholder = "Phone Number" class = "form-input">
           <input type="text" name="mobile_number" placeholder = "Mobile Number" class = "form-input">
-          <select name="nationality" class = "form-input">
+          <select name="nationality"  id="nationality" class = "form-input">
             <option value=""> Nationality </option>
             <?php foreach ($countries as $country): ?>
               <option value="<?=$country['id']?>"> <?=$country['nationality']?> </option>
@@ -51,13 +51,13 @@
         </div>
         <div class = "step-form step-two" data-next = ".step-form.step-three">
           <h2>Property Details</h2>
-          <select name="tower_name" class = "form-input">
+          <select name="tower_name" id="tower_name" class = "form-input">
             <option value=""> Tower Name </option>
             <?php foreach ($towers as $tower): ?>
               <option value="<?=$tower['id']?>"> <?=$tower['name']?> </option>
             <?php endforeach; ?>
           </select>
-          <select name="apartment_number"class = "form-input">
+          <select name="apartment_number" id="apartment_number"  class = "form-input">
             <option value=""> Apartment Number </option>
             <?php foreach ($apartments as $apartment): ?>
               <option value="<?=$apartment['id']?>" data-tower-id="<?=$apartment['tower_id']?>" > <?=$apartment['name']?> </option>
