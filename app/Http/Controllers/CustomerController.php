@@ -19,7 +19,7 @@ class CustomerController extends Controller {
     if(!$token) { return redirect('/'); }
 
     $input = $request->getQueryString();
-    $customers = Customer::all()->toArray();
+    $customers = Customer::all();
     if(!$input)
       return view('customers.index', [ 'customers' => $customers ]);
 
