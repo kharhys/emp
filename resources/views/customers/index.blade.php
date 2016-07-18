@@ -52,10 +52,10 @@
               <td><a href=<?=$url?> class=""> <?=$cust['phone_number']?> </a></td>
               <td><?=$cust['first_name']?></td>
               <td><?=$cust['last_name']?></td>
-              <td><?=$cust['nationality']?></td>
+              <td><?=$nationality?></td>
               <td><?=$cust['address_one']."  ".$cust['city']?></td>
               <td><?=$cust['date_of_birth']?></td>
-              <td><?=$cust['tower_name']?></td>
+              <td><?=$towername?></td>
               <td><?=$cust['apartment_number']?></td>
             </tr>
           <?php endforeach; ?>
