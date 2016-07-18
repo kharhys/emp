@@ -2,6 +2,20 @@
   margin: 1rem 0;
 }
 
+.alert {
+  width: 70%;
+  margin: 0 auto;
+  color: #ff4081;
+}
+
+.alert  ul {
+  list-style-type: none;
+}
+
+.alert  li {
+  color: #ff4081;
+  padding: 5px 0;
+}
 
 body {
   padding: 0;
@@ -20,7 +34,7 @@ body {
   margin: 0 auto;
 }
 nav > .wrap {
-  display: flex;  
+  display: flex;
 }
 nav > .wrap ul:first-child {
   flex: 4;
