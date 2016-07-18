@@ -91,15 +91,10 @@ class CustomerController extends Controller {
     $property = Customer::where('phone_number', $phone)->first($_prop)->toArray();
     $attachment = Customer::where('phone_number', $phone)->first($_att)->toArray();
 
-    $towername = Tower::where('id', $property['tower_name'])->pluck(['name']);
-    $nationality = Nationality::where('id', $personal['nationality'])->pluck(['name']);
-
     $res = [
       'personal' => $personal,
       'property' => $property,
       'attachment' => $attachment,
-      'towername' => $towername,
-      'nationality' => $nationality,
     ];
     return view('customers.view', $res);
   }
