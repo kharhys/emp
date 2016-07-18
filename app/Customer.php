@@ -17,7 +17,7 @@ class Customer extends Model
     }
 
     public function towerName () {
-      return Tower::where('id', $this->attributes['tower_name'])->first()->name;
+      return Tower::where('id', $this->attributes['tower_name'])->first();
     }
 
 }
