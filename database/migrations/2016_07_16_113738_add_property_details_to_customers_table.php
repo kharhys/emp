@@ -22,6 +22,7 @@ class AddPropertyDetailsToCustomersTable extends Migration
             $table->string('emirates_id')->nullable()->change();
             $table->string('first_name')->nullable()->change();
             $table->string('last_name')->nullable()->change();
+            
             $table->string('occupation')->nullable()->change();
             $table->string('address')->nullable()->change();
             $table->string('gender')->nullable()->change();

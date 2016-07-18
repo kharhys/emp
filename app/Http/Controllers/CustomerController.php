@@ -8,6 +8,7 @@ use App\Apartment;
 use App\Nationality;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\StoreCustomerRequest;
 
 class CustomerController extends Controller {
 
@@ -44,7 +45,7 @@ class CustomerController extends Controller {
     return view('customers.add', $res);
   }
 
-  public function create(Request $request) {
+  public function create(StoreCustomerRequest $request) {
     //ensure auth
     $token = \Cookie::get('token');
     if(!$token) { return redirect('/'); }

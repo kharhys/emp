@@ -31,6 +31,15 @@
 
   <div class="table__card">
     <div class="main">
+      @if (count($errors) > 0)
+        <div class="alert alert-danger">
+          <ul>
+            @foreach ($errors->all() as $error)
+              <li>{{ $error }}</li>
+            @endforeach
+          </ul>
+        </div>
+      @endif
       <form class = "steps-form" method="post" action="{{ URL::to('customers/create') }}" >
         <div class = "step-form" data-next = ".step-form.step-two">
           <h2>Customer Details</h2>
