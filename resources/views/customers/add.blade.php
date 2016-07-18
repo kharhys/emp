@@ -92,18 +92,15 @@
     'use strict';
     (function ($) {
       $(document).on('ready', function () {
-        console.log('setting up option filters')
+
         var apartment_number_options = $('#apartment_number option').clone()
-        console.log('setting up option filters handles')
         $('#tower_name').on('change', function() {
           var towerId = $(this).val();
-          console.log('handle tower selection', towerId)
           var opts = apartment_number_options.clone()
           .filter(function(){ return this.dataset.towerId == towerId; })
           $('#apartment_number').html(opts)
         })
 
-        console.log('setting up form step handles')
         $('.next-step').on('click', function (evt) {
           evt.preventDefault();
           var $this = $(evt.currentTarget);
