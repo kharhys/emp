@@ -13,11 +13,11 @@ class Customer extends Model
     protected $fillable = ['name', 'gender', 'dob', 'occupation', 'address', 'phone'];
 
     public function nationalityName () {
-      return Nationality::where('id', $this->attributes['nationality'])->first();
+      return Nationality::where('id', $this->attributes['nationality'])->first()->nationality;
     }
 
     public function towerName () {
-      return Tower::where('id', $this->attributes['tower_name'])->first();
+      return Tower::where('id', $this->attributes['tower_name'])->first()->name;
     }
 
 }
