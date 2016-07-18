@@ -12,11 +12,11 @@ class Customer extends Model
     //mass assignable
     protected $fillable = ['name', 'gender', 'dob', 'occupation', 'address', 'phone'];
 
-    public function nationalityName () {
+    public function nationality () {
       return Nationality::where('id', $this->attributes['id'])->first();
     }
 
-    public function towerName () {
+    public function tower () {
       return Tower::where('id', $this->attributes['id'])->first();
     }
 
