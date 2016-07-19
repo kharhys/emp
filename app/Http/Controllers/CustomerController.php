@@ -28,7 +28,7 @@ class CustomerController extends Controller {
     if(!$customer)
       return redirect("/customers/newpopup");
 
-    return redirect("/customers/view/".$phone);
+    return redirect("/customers/showpopup/".$phone);
 
   }
 
@@ -86,31 +86,17 @@ class CustomerController extends Controller {
     $token = \Cookie::get('token');
     if(!$token) { return redirect('/'); }
 
-    if ( !Customer::where('phone_number', $phone)->exists() )
-      return redirect('/customers')->with('notification', 'Customer not found');
-
-    $_pers = [
-      'first_name', 'last_name', 'date_of_birth',
-      'mobile_number', 'phone_number', 'address_one',
-      'nationality', 'passport_number', 'emirates_id'
-    ];
-    $_prop = [
-      'tower_name', 'apartment_number', 'area_sq_ft',
-      'contract_date', 'address_one', 'address_two',
-      'city', 'postal_address', 'email_address'
-    ];
-    $_att = [ 'passport_attachment', 'contract_attachment' ];
-
-    $personal = Customer::where('phone_number', $phone)->first($_pers)->toArray();
-    $property = Customer::where('phone_number', $phone)->first($_prop)->toArray();
-    $attachment = Customer::where('phone_number', $phone)->first($_att)->toArray();
-
-    $res = [
-      'personal' => $personal,
-      'property' => $property,
-      'attachment' => $attachment,
-    ];
+    $res = $this->fetch($phone);
     return view('customers.view', $res);
+  }
+
+  public function showpopup($phone) {
+    //ensure auth
+    $token = \Cookie::get('token');
+    if(!$token) { return redirect('/'); }
+
+    $res = $this->fetch($phone);
+    return view('customers.showpopup', $res);
   }
 
   public function delete($phone) {
@@ -169,6 +155,30 @@ class CustomerController extends Controller {
     //$customer->contract_attachment = $request->get('contract_attachment');
 
     $customer->save();
+  }
+
+  private function fetch ($phone) {
+    if ( !Customer::where('phone_number', $phone)->exists() )
+      return redirect('/customers')->with('notification', 'Customer not found');
+
+    $_pers = [
+      'first_name', 'last_name', 'date_of_birth',
+      'mobile_number', 'phone_number', 'address_one',
+      'nationality', 'passport_number', 'emirates_id'
+    ];
+    $_prop = [
+      'tower_name', 'apartment_number', 'area_sq_ft',
+      'contract_date', 'address_one', 'address_two',
+      'city', 'postal_address', 'email_address'
+    ];
+    $_att = [ 'passport_attachment', 'contract_attachment' ];
+
+    return [
+      'customers' => Customer::all(),
+      'personal' => Customer::where('phone_number', $phone)->first($_pers)->toArray(),
+      'property' => Customer::where('phone_number', $phone)->first($_prop)->toArray(),
+      'attachment' => Customer::where('phone_number', $phone)->first($_att)->toArray(),
+    ];
   }
 
 }

@@ -65,10 +65,10 @@
   </div>
 
   <aside id="popup" class="tinymodal-window tinymodal-window-open ">
-		<div class="tinymodal-inner">
+    <div class="tinymodal-inner">
       <button class="tinymodal-close">Close</button>
-			@include('customers.addform')
-		</div>
+      @include('customers.viewtabs')
+    </div>
   </aside>
 
 </div>

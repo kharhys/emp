@@ -69,9 +69,5 @@
 
 @section('script')
   <script type="text/javascript">
-    $(document).ready(function() {
-      $('.table__card table').DataTable({})
-      $('.table__card .dataTables_filter input').attr('placeholder', 'Search')
-    })
   </script>
 @endsection

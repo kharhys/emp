@@ -16,7 +16,7 @@
 }
 
 .tinymodal-inner {
-  height: 90%;
+  height: 90% !important;
   margin: 2rem 0;
 }
 
