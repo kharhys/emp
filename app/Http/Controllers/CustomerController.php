@@ -26,7 +26,7 @@ class CustomerController extends Controller {
     $phone = explode("=", $input)[1];
     $customer = Customer::where('phone_number', $phone)->first();
     if(!$customer)
-      return redirect("/customers/addpopup");
+      return redirect("/customers/new");
 
     return redirect("/customers/view/".$phone);
 
@@ -45,7 +45,7 @@ class CustomerController extends Controller {
     return view('customers.add', $res);
   }
 
-  public function addpopup(Request $request) {
+  public function new(Request $request) {
     //ensure auth
     $token = \Cookie::get('token');
     if(!$token) { return redirect('/'); }
@@ -56,7 +56,7 @@ class CustomerController extends Controller {
       'apartments' => Apartment::all(),
       'countries' => Nationality::all(),
     ];
-    return view('customers.createpopup', $res);
+    return view('customers.new', $res);
   }
 
   public function create(StoreCustomerRequest $request) {
