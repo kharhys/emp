@@ -101,7 +101,7 @@
 
       function openModal() {
           tinyModal.openModal("#addpopup", function(){
-              console.log('#addpopup opened');
+              console.log('#addpopup modal opened');
           });
       }
 
