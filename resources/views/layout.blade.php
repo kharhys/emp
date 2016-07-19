@@ -64,6 +64,8 @@
     <script src="https://rawgit.com/juanbrujo/tinyModal/master/dist/tinyModal.js"> </script>
     <script src="/formsteps.js" charset="utf-8"></script>
     <script src="/kebab.js" charset="utf-8"></script>
+    <script src="/popup.js" charset="utf-8"></script>
+    <script src="/master.js" charset="utf-8"></script>
     @yield('script')
   </body>
 </html>
