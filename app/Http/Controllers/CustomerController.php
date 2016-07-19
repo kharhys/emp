@@ -45,6 +45,20 @@ class CustomerController extends Controller {
     return view('customers.add', $res);
   }
 
+  public function addpopup(Request $request) {
+    //ensure auth
+    $token = \Cookie::get('token');
+    if(!$token) { return redirect('/'); }
+
+    $res = [
+      'towers' => Tower::all(),
+      'customers' => Customer::all(),
+      'apartments' => Apartment::all(),
+      'countries' => Nationality::all(),
+    ];
+    return view('customers.addpopup', $res);
+  }
+
   public function create(StoreCustomerRequest $request) {
     //ensure auth
     $token = \Cookie::get('token');
