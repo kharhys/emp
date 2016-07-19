@@ -15,7 +15,8 @@ class CustomerController extends Controller {
   public function index(Request $request) {
 
     $qs = $_SERVER["QUERY_STRING"];
-    $phone = explode("=", $qs)[1];
+    $pn = explode("=", $qs)[1];
+    $phone = substr($pn, 1, -1);
     print_r($phone); exit();
 
     //ensure auth
