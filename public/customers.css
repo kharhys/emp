@@ -2,6 +2,23 @@
   margin: 1rem 0;
 }
 
+.tinymodal-window {
+  width: 70%;
+  height: 90%;
+  border-radius: 0;
+}
+
+.tinymodal-close {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+}
+
+.tinymodal-inner {
+  margin: 2rem 0;
+}
+
 .alert {
   width: 70%;
   margin: 0 auto;
