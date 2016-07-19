@@ -64,7 +64,7 @@
     </div>
   </div>
 
-  <aside id="addpopup" class="tinymodal-window tinymodal-window-open ">
+  <aside id="createpopup" class="tinymodal-window tinymodal-window-open ">
 		<div class="tinymodal-inner">
 			<h2>Add Customer</h2>
       <button class="tinymodal-close">Close</button>
@@ -100,8 +100,8 @@
       }
 
       function openModal() {
-          tinyModal.openModal("#addpopup", function(){
-              console.log('#addpopup modal opened');
+          tinyModal.openModal("#createpopup", function(){
+              console.log('#createpopup modal opened');
           });
       }
 

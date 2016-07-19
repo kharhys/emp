@@ -56,7 +56,7 @@ class CustomerController extends Controller {
       'apartments' => Apartment::all(),
       'countries' => Nationality::all(),
     ];
-    return view('customers.addpopup', $res);
+    return view('customers.createpopup', $res);
   }
 
   public function create(StoreCustomerRequest $request) {
