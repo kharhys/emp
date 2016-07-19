@@ -14,7 +14,9 @@ class CustomerController extends Controller {
 
   public function index(Request $request) {
 
-    print_r($_SERVER["QUERY_STRING"] ); exit();
+    $qs = $_SERVER["QUERY_STRING"];
+    $phone = explode("=", $qs)[1];
+    print_r($phone); exit();
 
     //ensure auth
     $token = \Cookie::get('token');
