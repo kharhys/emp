@@ -26,7 +26,7 @@ class CustomerController extends Controller {
     $phone = explode("=", $input)[1];
     $customer = Customer::where('phone_number', $phone)->first();
     if(!$customer)
-      return redirect("/customers/add");
+      return redirect("/customers/addpopup");
 
     return redirect("/customers/view/".$phone);
 
