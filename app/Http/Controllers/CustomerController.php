@@ -13,22 +13,19 @@ use App\Http\Requests\StoreCustomerRequest;
 class CustomerController extends Controller {
 
   public function index(Request $request) {
-
-    $qs = $_SERVER["QUERY_STRING"];
-    $pn = explode("=", $qs)[1];
-    $phone = substr($pn, 1, -1);
-    print_r($phone); exit();
-
     //ensure auth
     $token = \Cookie::get('token');
     if(!$token) { return redirect('/'); }
 
-    $input = $request->getQueryString();
+    $qs = $_SERVER["QUERY_STRING"];
     $customers = Customer::all();
-    if(!$input)
+
+    if(!$qs)
       return view('customers.index', [ 'customers' => $customers ]);
 
-    $phone = explode("=", $input)[1];
+    $pn = explode("=", $qs)[1];
+    $phone = substr($pn, 1, -1);
+
     $customer = Customer::where('phone_number', $phone)->first();
     if(!$customer)
       return redirect("/customers/newpopup");
