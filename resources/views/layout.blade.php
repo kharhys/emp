@@ -12,9 +12,6 @@
     <link rel='stylesheet' href='https://rawgit.com/juanbrujo/tinyModal/master/dist/tinyModal.css' type='text/css' />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.11/css/jquery.dataTables.min.css" />
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.11/js/jquery.dataTables.min.js"> </script>
-    <script src="https://rawgit.com/juanbrujo/tinyModal/master/dist/tinyModal.js"> </script>
     @yield('head')
   </head>
   <body>
@@ -61,6 +58,10 @@
         </div>
       </main>
     </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.11/js/jquery.dataTables.min.js"> </script>
+    <script src="https://rawgit.com/juanbrujo/tinyModal/master/dist/tinyModal.js"> </script>
     @yield('script')
   </body>
 </html>
