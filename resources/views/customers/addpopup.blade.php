@@ -68,7 +68,7 @@
 		<div class="tinymodal-inner">
 			<h2>Add Customer</h2>
       <button class="tinymodal-close">Close</button>
-			@include('addform')
+			@include('customers.addform')
 		</div>
   </aside>
 
