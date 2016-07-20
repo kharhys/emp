@@ -63,9 +63,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.11/js/jquery.dataTables.min.js"> </script>
     <script src="/formsteps.js" charset="utf-8"></script>
     <script src="/kebab.js" charset="utf-8"></script>
-    <script src="/master.js" charset="utf-8"></script>
-    <script src="https://rawgit.com/juanbrujo/tinyModal/master/dist/tinyModal.js"> </script>
     <script src="/popup.js" charset="utf-8"></script>
+    <script src="/master.js" charset="utf-8"></script>
     @yield('script')
   </body>
 </html>

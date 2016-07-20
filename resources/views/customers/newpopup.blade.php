@@ -75,6 +75,5 @@
 @endsection
 
 @section('script')
-  <script type="text/javascript">
-  </script>
+<script src="https://rawgit.com/juanbrujo/tinyModal/master/dist/tinyModal.js"> </script>
 @endsection
