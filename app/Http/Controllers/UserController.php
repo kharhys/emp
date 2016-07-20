@@ -72,14 +72,14 @@ class UserController extends Controller {
     return redirect('/customers');
   }
 
-  public function view($phone) {
+  public function view($uuid) {
     //ensure auth
     $token = \Cookie::get('token');
     if(!$token) { return redirect('/'); }
 
     exit();
-    $res = $this->fetch($phone);
-    return view('customers.view', $res);
+    $user = User::where('id', $uuid)->first();
+    return view('customers.view', [ 'user' => $user ]);
   }
 
   public function showpopup($phone) {

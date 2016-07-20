@@ -36,7 +36,7 @@
         <div class="wrap">
           <ul>
             <li><a class="active" href="{{ URL::to('customers') }}">Customers</a></li>
-            <li><a href="#">Users</a></li>
+            <li><a href="{{ URL::to('users') }}">Users</a></li>
             <li><a href="#">Account</a></li>
             <li><a href="#">Settings</a></li>
           </ul>

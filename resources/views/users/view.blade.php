@@ -1,0 +1,43 @@
+@extends('layout')
+
+@section('head')
+
+@endsection
+
+@section('page')
+<div class="container">
+  <div class="main">
+    <header class="page-header">
+      <h1> View User  </h1>
+    </header>
+
+    <div class="fab-modal-backdrop">
+      <div class="fab-modal-shadow-surogate"></div>
+      <div class="fab-modal-container inactive" id="dialog">
+        <div class="fab-modal-inner">
+          <button class="inactive dialog__btn">
+            <a href="{{ URL::to('users') }}"> <i class="material-icons fab inactive">keyboard_arrow_left</i> </a>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="ios-dl">
+      <div class="definition-group">
+        <?php foreach ($user as $key => $val): ?>
+          <ul class="dl-horizontal">
+            <li><?=$key?></li>
+            <li><?=$val?></li>
+          </ul>
+        <?php endforeach; ?>
+      </div>
+    </div>
+
+  </div>
+</div>
+@endsection
+
+@section('script')
+<script type="text/javascript">
+</script>
+@endsection
