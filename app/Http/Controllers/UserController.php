@@ -78,7 +78,7 @@ class UserController extends Controller {
     if(!$token) { return redirect('/'); }
 
     $user = User::where('id', $uuid)->first();
-    return view('customers.view', [ 'user' => $user ]);
+    return view('users.view', [ 'user' => $user ]);
   }
 
   public function showpopup($phone) {
