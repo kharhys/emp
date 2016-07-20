@@ -37,8 +37,8 @@
               <figure class="middle"></figure>
               <p class="cross">x</p>
               <figure></figure>
-              <?php $edit_url = \URL::to('customers/edit', [ 'phone' => $user['id'] ]); ?>
-              <?php $delete_url = \URL::to('customers/delete', [ 'phone' => $user['id'] ]); ?>
+              <?php $edit_url = \URL::to('users/edit', [ 'phone' => $user['id'] ]); ?>
+              <?php $delete_url = \URL::to('users/delete', [ 'phone' => $user['id'] ]); ?>
               <ul class="m-dropdown">
                 <li><a href=<?=$edit_url?> >Edit</a></li>
                 <li><a href=<?=$delete_url?> >Delete</a></li>

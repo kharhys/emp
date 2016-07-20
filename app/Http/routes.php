@@ -26,4 +26,5 @@ Route::get('/customers/{name?}', 'CustomerController@index');
 Route::get('/users', 'UserController@index');
 Route::get('/users/add', 'UserController@add');
 Route::get('/users/view/{id}', 'UserController@view');
+Route::get('/users/edit/{id}', 'UserController@edit');
 Route::post('/users/update', 'UserController@update');
