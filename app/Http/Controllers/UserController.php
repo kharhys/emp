@@ -65,11 +65,11 @@ class UserController extends Controller {
     $token = \Cookie::get('token');
     if(!$token) { return redirect('/'); }
 
-    $phone = $request->get('old_phone');
-    $customer = Customer::where('phone_number', $phone)->first();
-    $this->store($customer, $request);
+    $uuid = $request->get('uuid');
+    $user = User::where('id', $uuid)->first();
+    $this->store($user, $request);
 
-    return redirect('/customers');
+    return redirect('/users')->with('notification', 'User details updated successfully');
   }
 
   public function view($uuid) {
@@ -100,57 +100,29 @@ class UserController extends Controller {
     return redirect('/customers');
   }
 
-  public function edit($phone) {
+  public function edit($uuid) {
     //ensure auth
     $token = \Cookie::get('token');
     if(!$token) { return redirect('/'); }
 
-    if ( !Customer::where('phone_number', $phone)->exists() )
-      return redirect('/customers')->with('notification', 'Customer not found');
+    if ( !User::where('id', $uuid)->exists() )
+      return redirect('/users')->with('notification', 'User not found');
 
 
-    $customer = Customer::where('phone_number', $phone)
-      ->first()
-      ->toArray();
+    $user = User::where('id', $uuid)->first()->toArray();
 
     $res = [
-      'customer' => $customer,
-      'towers' => Tower::all(),
-      'apartments' => Apartment::all(),
-      'countries' => Nationality::all(),
+      'user' => $user,
     ];
-    return view('customers.edit', $res);
+    return view('users.edit', $res);
   }
 
-  private function store($customer, $request) {
+  private function store($user, $request) {
 
-    $customer->dob = $request->get('dob');
-    $customer->name = $request->get('name');
-    $customer->city = $request->get('city');
-    $customer->phone = $request->get('phone');
-    $customer->gender = $request->get('gender');
-    $customer->address = $request->get('address');
-    $customer->last_name = $request->get('last_name');
-    $customer->first_name = $request->get('first_name');
-    $customer->occupation = $request->get('occupation');
-    $customer->tower_name = $request->get('tower_name');
-    $customer->area_sq_ft = $request->get('area_sq_ft');
-    $customer->address_two = $request->get('address_two');
-    $customer->emirates_id = $request->get('emirates_id');
-    $customer->nationality = $request->get('nationality');
-    $customer->address_one = $request->get('address_one');
-    $customer->phone_number = $request->get('phone_number');
-    $customer->email_address = $request->get('email_address');
-    $customer->date_of_birth = $request->get('date_of_birth');
-    $customer->mobile_number = $request->get('mobile_number');
-    $customer->contract_date = $request->get('contract_date');
-    $customer->postal_address = $request->get('postal_address');
-    $customer->passport_number = $request->get('passport_number');
-    $customer->apartment_number = $request->get('apartment_number');
-    //$customer->passport_attachment = $request->get('passport_attachment');
-    //$customer->contract_attachment = $request->get('contract_attachment');
+    $user->name = $request->get('name');
+    $user->email = $request->get('email');
 
-    $customer->save();
+    $user->save();
   }
 
   private function fetch ($phone) {

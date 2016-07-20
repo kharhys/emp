@@ -59,7 +59,7 @@
                     <li><?=$user['name']?></li>
                   </ul>
                   <ul class="dl-horizontal">
-                    <li>Emaile Address</li>
+                    <li>Email Address</li>
                     <li><?=$user['email']?></li>
                   </ul>
                 <?php foreach ($user as $key => $val): ?>
