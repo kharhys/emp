@@ -7,7 +7,7 @@
 @section('page')
 <div class="container">
   <header class="page-header">
-    <h1> Manage Customers  </h1>
+    <h1> Manage Users  </h1>
   </header>
 
   <div class="fab-modal-backdrop">
@@ -15,7 +15,7 @@
     <div class="fab-modal-container inactive" id="dialog">
       <div class="fab-modal-inner">
         <button class="inactive dialog__btn">
-          <?php $view_url = \URL::to('customers/view', [ 'phone' => $customer['phone_number'] ]); ?>
+          <?php $view_url = \URL::to('users/view', [ 'id' => $user['id'] ]); ?>
           <a href=<?=$view_url?> ><i class="material-icons fab inactive">keyboard_arrow_left</i></a>
         </button>
         <div class="fab-modal-modal-content">
