@@ -124,7 +124,10 @@ class CustomerController extends Controller {
       ->first()
       ->toArray();
 
-    $res = [ 'customer' => $customer ];
+    $res = [
+      'customer' => $customer,
+      'countries' => Nationality::all(),
+    ];
     return view('customers.edit', $res);
   }
 
