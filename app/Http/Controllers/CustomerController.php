@@ -166,19 +166,26 @@ class CustomerController extends Controller {
     $_pers = [
       'first_name', 'last_name', 'date_of_birth',
       'mobile_number', 'phone_number', 'address_one',
-      'nationality', 'passport_number', 'emirates_id'
+      'passport_number', 'emirates_id'
     ];
     $_prop = [
-      'tower_name', 'apartment_number', 'area_sq_ft',
+      'apartment_number', 'area_sq_ft',
       'contract_date', 'address_one', 'address_two',
       'city', 'postal_address', 'email_address'
     ];
     $_att = [ 'passport_attachment', 'contract_attachment' ];
 
+    $customer = Customer::where('phone_number', $phone)->first();
+
+    $personal = Customer::where('phone_number', $phone)->first($_pers)->toArray();
+    $personal['nationality'] = $customer->nationalityName();
+
+    $property = Customer::where('phone_number', $phone)->first($_prop)->toArray();
+    $property['tower_name'] = $customer->towerName();
     return [
       'customers' => Customer::all(),
-      'personal' => Customer::where('phone_number', $phone)->first($_pers)->toArray(),
-      'property' => Customer::where('phone_number', $phone)->first($_prop)->toArray(),
+      'personal' => $personal,
+      'property' => $property,
       'attachment' => Customer::where('phone_number', $phone)->first($_att)->toArray(),
     ];
   }
