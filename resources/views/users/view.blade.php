@@ -55,7 +55,11 @@
             <div class="ios-dl">
               <div class="definition-group">
                   <ul class="dl-horizontal">
+                    <li>User Name</li>
                     <li><?=$user['name']?></li>
+                  </ul>
+                  <ul class="dl-horizontal">
+                    <li>Emaile Address</li>
                     <li><?=$user['email']?></li>
                   </ul>
                 <?php foreach ($user as $key => $val): ?>
