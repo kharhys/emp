@@ -76,4 +76,5 @@
 
 @section('script')
 <script src="https://rawgit.com/juanbrujo/tinyModal/master/dist/tinyModal.js"> </script>
+<script src="/popup.js" charset="utf-8"></script>
 @endsection
