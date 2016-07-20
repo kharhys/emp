@@ -49,16 +49,26 @@
       </div>
       <main>
 
-        <div class="ios-dl">
-          <div class="definition-group">
-            <?php foreach ($user as $key => $val): ?>
-              <ul class="dl-horizontal">
-                <li><?=$key?></li>
-                <li><?=$val?></li>
-              </ul>
-            <?php endforeach; ?>
-          </div>
-        </div>
+        <section id="content1">
+          <p>
+            <div class="ns_tab_content">
+              <div class="row-fluid">
+
+                <div class="ios-dl">
+                  <div class="definition-group">
+                    <?php foreach ($user as $key => $val): ?>
+                      <ul class="dl-horizontal">
+                        <li><?=$key?></li>
+                        <li><?=$val?></li>
+                      </ul>
+                    <?php endforeach; ?>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </p>
+        </section>
 
       </main>
     </div>
