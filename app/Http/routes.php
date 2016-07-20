@@ -22,3 +22,7 @@ Route::get('/customers/view/{phone}', 'CustomerController@view'); //no popup
 Route::get('/customers/edit/{phone}', 'CustomerController@edit');
 Route::get('/customers/delete/{phone}', 'CustomerController@delete');
 Route::get('/customers/{name?}', 'CustomerController@index');
+
+Route::get('/users', 'UserController@index');
+Route::get('/users/add', 'UserController@add');
+Route::get('/users/view/{id}', 'UserController@view');
