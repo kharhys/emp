@@ -47,7 +47,7 @@
           <select name="nationality"  id="nationality" class = "form-input">
             <option value=""> Nationality </option>
             <?php foreach ($countries as $country): ?>
-              <option value="<?=$country['id']?>" <?=($country['id'] == $customer['nationality'] ? "selected='selected'" : '')?> > 
+              <option value="<?=$country['id']?>" <?=($country['id'] == $customer['nationality'] ? "selected='selected'" : '')?> >
                 <?=$country['nationality']?>
               </option>
             <?php endforeach; ?>
@@ -58,8 +58,23 @@
         </div>
         <div class = "step-form step-two" data-next = ".step-form.step-three">
           <h2>Property Details</h2>
-          <input type="text" name="tower_name" value="<?=$customer['tower_name']?>" placeholder = "Tower Name" class = "form-input">
-          <input type="text" name="apartment_number" value="<?=$customer['apartment_number']?>" placeholder = "Apartment Number" class = "form-input">
+          <select name="tower_name" id="tower_name" class = "form-input">
+            <option value=""> Tower Name </option>
+            <?php foreach ($towers as $tower): ?>
+              <option value="<?=$tower['id']?>" <?=($tower['id'] == $customer['tower_name'] ? "selected='selected'" : '')?>>
+                <?=$tower['name']?>
+              </option>
+            <?php endforeach; ?>
+          </select>
+          <select name="apartment_number" id="apartment_number"  class = "form-input">
+            <option value=""> Apartment Number </option>
+            <?php foreach ($apartments as $apartment): ?>
+              <option value="<?=$apartment['id']?>"
+                data-tower-id="<?=$apartment['tower_id']?>" <?=($apartment['id'] == $customer['apartment_number'] ? "selected='selected'" : '')?> > 
+                <?=$apartment['name']?>
+              </option>
+            <?php endforeach; ?>
+          </select>
           <input type="text" name="area_sq_ft" value="<?=$customer['area_sq_ft']?>" placeholder = "Area In Sq. Ft." class = "form-input">
           <input type="text" name="contract_date" value="<?=$customer['contract_date']?>" placeholder = "Contract Date" class = "form-input">
           <input type="text" name="address_one" value="<?=$customer['address_one']?>" placeholder = "Address 1" class = "form-input">

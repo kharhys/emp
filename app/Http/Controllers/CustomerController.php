@@ -126,6 +126,8 @@ class CustomerController extends Controller {
 
     $res = [
       'customer' => $customer,
+      'towers' => Tower::all(),
+      'apartments' => Apartment::all(),
       'countries' => Nationality::all(),
     ];
     return view('customers.edit', $res);
