@@ -44,6 +44,14 @@
           <input type="text" value="<?=$customer['phone_number']?>" name="phone_number" placeholder = "Phone Number" class = "form-input">
           <input type="text" value="<?=$customer['mobile_number']?>" name="mobile_number" placeholder = "Mobile Number" class = "form-input">
           <input type="text" value="<?=$customer['nationality']?>" name="nationality" placeholder = "Nationality" class = "form-input">
+          <select name="nationality"  id="nationality" class = "form-input">
+            <option value=""> Nationality </option>
+            <?php foreach ($countries as $country): ?>
+              <option value="<?=$country['id']?>" <?=($country['id'] == $customer['nationality'] ? "selected='selected'" : '')?> > 
+                <?=$country['nationality']?>
+              </option>
+            <?php endforeach; ?>
+          </select>
           <input type="text" value="<?=$customer['passport_number']?>" name="passport_number" placeholder = "Passport Number" class = "form-input">
           <input type="text" value="<?=$customer['emirates_id']?>" name="emirates_id" placeholder = "Emirates ID" class = "form-input">
           <button class = "form-input btn next-step" type = "button">Next</button>
