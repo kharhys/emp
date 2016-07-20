@@ -77,7 +77,6 @@ class UserController extends Controller {
     $token = \Cookie::get('token');
     if(!$token) { return redirect('/'); }
 
-    exit();
     $user = User::where('id', $uuid)->first();
     return view('customers.view', [ 'user' => $user ]);
   }

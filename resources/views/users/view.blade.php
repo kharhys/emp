@@ -22,16 +22,47 @@
       </div>
     </div>
 
-    <div class="ios-dl">
-      <div class="definition-group">
-        <?php foreach ($user as $key => $val): ?>
-          <ul class="dl-horizontal">
-            <li><?=$key?></li>
-            <li><?=$val?></li>
+
+    <div class="page_card">
+
+      <div class="page_card_header">
+        <div id="customer_details">
+          <h1> <?=$user['name'] ?> </h1>
+          <h2> <?=$user['email'] ?>  </h2>
+        </div>
+        <div>
+          <ul class="nav">
+            <div class="kebab">
+              <figure></figure>
+              <figure class="middle"></figure>
+              <p class="cross">x</p>
+              <figure></figure>
+              <?php $edit_url = \URL::to('customers/edit', [ 'phone' => $user['id'] ]); ?>
+              <?php $delete_url = \URL::to('customers/delete', [ 'phone' => $user['id'] ]); ?>
+              <ul class="m-dropdown">
+                <li><a href=<?=$edit_url?> >Edit</a></li>
+                <li><a href=<?=$delete_url?> >Delete</a></li>
+              </ul>
+            </div>
           </ul>
-        <?php endforeach; ?>
+        </div>
       </div>
+      <main>
+
+        <div class="ios-dl">
+          <div class="definition-group">
+            <?php foreach ($user as $key => $val): ?>
+              <ul class="dl-horizontal">
+                <li><?=$key?></li>
+                <li><?=$val?></li>
+              </ul>
+            <?php endforeach; ?>
+          </div>
+        </div>
+
+      </main>
     </div>
+
 
   </div>
 </div>
