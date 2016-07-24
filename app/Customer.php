@@ -3,6 +3,7 @@
 namespace App;
 
 use App\Tower;
+use App\Apartment;
 use App\Nationality;
 
 use Illuminate\Database\Eloquent\Model;
@@ -18,6 +19,10 @@ class Customer extends Model
 
     public function towerName () {
       return Tower::where('id', $this->attributes['tower_name'])->first()->name;
+    }
+
+    public function apartmentName () {
+      return Apartment::where('id', $this->attributes['apartment_number'])->first()->name;
     }
 
 }

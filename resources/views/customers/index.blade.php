@@ -56,7 +56,7 @@
               <td><?=$cust['address_one']."  ".$cust['city']?></td>
               <td><?=$cust['date_of_birth']?></td>
               <td><?=$cust->towerName()?></td>
-              <td><?=$cust['apartment_number']?></td>
+              <td><?=$cust->apartmentName()?></td>
             </tr>
           <?php endforeach; ?>
         </tbody>
