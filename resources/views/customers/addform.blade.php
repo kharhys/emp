@@ -14,7 +14,7 @@
         <h2>Customer Details</h2>
         <input type="text" name="first_name" placeholder = "First Name" class = "form-input">
         <input type="text" name="last_name" placeholder = "Last Name" class = "form-input">
-        <input type="text" name="date_of_birth" placeholder = "Date Of Birth Name" class = "form-input date">
+        <input type="text" name="date_of_birth" placeholder = "Date Of Birth" class = "form-input date">
         <input type="text" name="phone_number" placeholder = "Phone Number" class = "form-input">
         <input type="text" name="mobile_number" placeholder = "Mobile Number" class = "form-input">
         <select name="nationality"  id="nationality" class = "form-input">
