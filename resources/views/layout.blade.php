@@ -4,6 +4,7 @@
     <title>Customers</title>
     <link rel="stylesheet" href="/fab.css" type="text/css" />
     <link rel="stylesheet" href="/bubbles.css" type="text/css" />
+    <link rel="stylesheet" href="/pickaday.css" type="text/css" />
     <link rel="stylesheet" href="/customers.css" type="text/css" />
     <link rel="stylesheet" href="/formsteps.css" media="screen" title="no title" charset="utf-8" />
     <link rel="stylesheet" href="/customersview.css" media="screen" title="no title" charset="utf-8" />
@@ -61,6 +62,9 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.11/js/jquery.dataTables.min.js"> </script>
+    <script src="/pickaday.js" charset="utf-8"></script>
+    <script src="/pickaday.jquery.js" charset="utf-8"></script>
+
     <script src="/formsteps.js" charset="utf-8"></script>
     <script src="/kebab.js" charset="utf-8"></script>
     <script src="/master.js" charset="utf-8"></script>
