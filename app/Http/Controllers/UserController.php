@@ -27,13 +27,8 @@ class UserController extends Controller {
     //ensure auth
     $token = \Cookie::get('token');
     if(!$token) { return redirect('/'); }
-    exit();
-    $res = [
-      'towers' => Tower::all(),
-      'apartments' => Apartment::all(),
-      'countries' => Nationality::all(),
-    ];
-    return view('customers.add', $res);
+
+    return view('users.add');
   }
 
   public function newpopup(Request $request) {
