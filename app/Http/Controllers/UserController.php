@@ -9,7 +9,7 @@ use App\Apartment;
 use App\Nationality;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Http\Requests\StoreCustomerRequest;
+use App\Http\Requests\StoreUserRequest;
 
 class UserController extends Controller {
 
