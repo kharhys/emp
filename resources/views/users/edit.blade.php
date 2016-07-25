@@ -1,4 +1,4 @@
-@extends('layout')
+email@extends('layout')
 
 @section('head')
 
@@ -15,7 +15,7 @@
     <div class="fab-modal-container inactive" id="dialog">
       <div class="fab-modal-inner">
         <button class="inactive dialog__btn">
-          <?php $view_url = \URL::to('users/view', [ 'id' => $user['id'] ]); ?>
+          <?php $view_url = \URL::to('users/view', [ 'email' => $user['email'] ]); ?>
           <a href=<?=$view_url?> ><i class="material-icons fab inactive">keyboard_arrow_left</i></a>
         </button>
         <div class="fab-modal-modal-content">

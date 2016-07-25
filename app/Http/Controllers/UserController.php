@@ -50,14 +50,14 @@ class UserController extends Controller {
     return view('customers.newpopup', $res);
   }
 
-  public function create(StoreCustomerRequest $request) {
+  public function create(StoreUserRequest $request) {
     //ensure auth
     $token = \Cookie::get('token');
     if(!$token) { return redirect('/'); }
 
-    $customer = new Customer;
-    $this->store($customer, $request);
-    return redirect('/customers');
+    $user = new User;
+    $this->store($user, $request);
+    return redirect('/users');
   }
 
   public function update(Request $request) {
@@ -72,12 +72,12 @@ class UserController extends Controller {
     return redirect('/users')->with('notification', 'User details updated successfully');
   }
 
-  public function view($uuid) {
+  public function view($email) {
     //ensure auth
     $token = \Cookie::get('token');
     if(!$token) { return redirect('/'); }
 
-    $user = User::where('id', $uuid)->first();
+    $user = User::where('email', $email)->first();
     return view('users.view', [ 'user' => $user ]);
   }
 
@@ -90,39 +90,34 @@ class UserController extends Controller {
     return view('customers.showpopup', $res);
   }
 
-  public function delete($phone) {
+  public function delete($email) {
     //ensure auth
     $token = \Cookie::get('token');
     if(!$token) { return redirect('/'); }
 
-    $customer = Customer::where('phone_number', $phone)->delete();
-    $res = [ 'customer' => $customer ];
-    return redirect('/customers');
+    $user = User::where('email', $email)->delete();
+    return redirect('/users');
   }
 
-  public function edit($uuid) {
+  public function edit($email) {
     //ensure auth
     $token = \Cookie::get('token');
     if(!$token) { return redirect('/'); }
 
-    if ( !User::where('id', $uuid)->exists() )
+    if ( !User::where('email', $email)->exists() )
       return redirect('/users')->with('notification', 'User not found');
 
-
-    $user = User::where('id', $uuid)->first()->toArray();
-
-    $res = [
-      'user' => $user,
-    ];
-    return view('users.edit', $res);
+    $user = User::where('email', $email)->first()->toArray();
+    return view('users.edit', [ 'user' => $user ]);
   }
 
   private function store($user, $request) {
 
-    $user->name = $request->get('name');
-    $user->email = $request->get('email');
+    $signupFields = Config::get('boilerplate.signup_fields');
+    $userData = $request->only($signupFields);
+    $user = User::create($userData);
 
-    $user->save();
+    return $user;
   }
 
   private function fetch ($phone) {

@@ -42,7 +42,7 @@
         </thead>
         <tbody>
           <?php foreach ($users as $user): ?>
-            <?php $url = \URL::to('users/view', [ 'id' => $user['id'] ]) ?>
+            <?php $url = \URL::to('users/view', [ 'email' => $user['email'] ]) ?>
             <tr>
               <td><a href=<?=$url?> class=""> <?=$user['id']?> </a></td>
               <td><?=$user['name']?></td>
