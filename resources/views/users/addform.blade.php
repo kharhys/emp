@@ -9,9 +9,9 @@
         </ul>
       </div>
     @endif
-    <form class = "steps-form" method="post" action="{{ URL::to('customers/create') }}" >
+    <form class = "steps-form" method="post" action="{{ URL::to('users/create') }}" >
       <div class = "step-form">
-        <h2>Attach Documents</h2>
+        <h2>User Details</h2>
         <label for="name"> <span data-text="name">User Name</span>  </label>
         <input name="name" type="text" placeholder = "" class = "form-input">
 
@@ -23,7 +23,7 @@
 
         <label for="password_confirmation"> <span data-text="password">Confirm Password</span>  </label>
         <input name="password_confirmation" type="password" placeholder = "" class = "form-input">
-        
+
         <button type = "submit" class = "form-input btn">Submit</button>
       </div>
     </form>
