@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Config;
 use App\User;
 use App\Tower;
 use App\Customer;
